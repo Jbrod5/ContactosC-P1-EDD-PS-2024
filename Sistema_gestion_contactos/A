@@ -1,0 +1,29 @@
+podria acer que cada nodo tena un contenido y un id
+asi, al buscar un elemento por el contenido, se podra devolver el contenidp y el id para buscar en los otros arboles por el id
+
+ejemplo
+
+seleccionar luis
+
+se retorna
+
+6,luis
+
+aora se busca en los demas arboles el 6
+
+6, 21/02/3014
+6, a
+
+
+ejemplo 2
+
+seleccionar a
+
+se retorna
+6, a
+
+
+aora se busca en los demmas arboles el 6
+
+6, luis
+6, 21/02/3014
