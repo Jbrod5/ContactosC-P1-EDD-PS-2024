@@ -87,10 +87,100 @@ Nodo<T>* Arbol<T>::buscarPorContenidoRecursivo(T contenido, Nodo<T>* nodo){
             buscarPorContenidoRecursivo(dato, nodo->obtIzquierdo());
         }
         if(nodo->obtDerecho() != nullptr){
-            buscarPorContenidoRecursivo(dato, nodo->obtDerecho());
+            buscarPorContenidoRecursivo(dato,
+             nodo->obtDerecho());
         }
     }
     return nullptr; 
 }
 
+
+
+
+
+
+
+
+
 /* -- CODIGO POR REVISAR -- */
+template<typename T>
+void Arbol<T>::balancear() {
+    balancearRecursivo(raiz);
+}
+
+template<typename T>
+void Arbol<T>::balancearRecursivo(Nodo<T>* nodo) {
+    if (nodo == nullptr) {
+        return;
+    }
+
+    int factorBalanceo = calcularFactorBalanceo(nodo);
+
+    if (factorBalanceo > 1) {
+        if (calcularFactorBalanceo(nodo->obtIzquierdo()) >= 0) {
+            rotacionDerecha(nodo);
+        } else {
+            rotacionIzquierdaDerecha(nodo);
+        }
+    } else if (factorBalanceo < -1) {
+        if (calcularFactorBalanceo(nodo->obtDerecho()) <= 0) {
+            rotacionIzquierda(nodo);
+        } else {
+            rotacionDerechaIzquierda(nodo);
+        }
+    }
+
+    balancearRecursivo(nodo->obtIzquierdo());
+    balancearRecursivo(nodo->obtDerecho());
+}
+
+template<typename T>
+int Arbol<T>::calcularFactorBalanceo(Nodo<T>* nodo) {
+    return altura(nodo->obtIzquierdo()) - altura(nodo->obtDerecho());
+}
+
+template<typename T>
+int Arbol<T>::altura(Nodo<T>* nodo) {
+    if (nodo == nullptr) {
+        return 0;
+    }
+
+    int alturaIzquierdo = altura(nodo->obtIzquierdo());
+    int alturaDerecho = altura(nodo->obtDerecho());
+
+    return 1 + std::max(alturaIzquierdo, alturaDerecho);
+}
+
+template<typename T>
+void Arbol<T>::rotacionIzquierda(Nodo<T>* nodo) {
+    Nodo<T>* nuevoPadre = nodo->obtDerecho();
+    nodo->insertarDerecho(nuevoPadre->obtIzquierdo());
+    nuevoPadre->insertarIzquierdo(nodo);
+
+    if (nodo == raiz) {
+        raiz = nuevoPadre;
+    }
+}
+
+template<typename T>
+void Arbol<T>::rotacionDerecha(Nodo<T>* nodo) {
+    Nodo<T>* nuevoPadre = nodo->obtIzquierdo();
+    nodo->insertarIzquierdo(nuevoPadre->obtDerecho());
+    nuevoPadre->insertarDerecho(nodo);
+
+    if (nodo == raiz) {
+        raiz = nuevoPadre;
+    }
+}
+
+template<typename T>
+void Arbol<T>::rotacionIzquierdaDerecha(Nodo<T>* nodo) {
+    rotacionIzquierda(nodo->obtIzquierdo());
+    rotacionDerecha(nodo);
+}
+
+template<typename T>
+void Arbol<T>::rotacionDerechaIzquierda(Nodo<T>* nodo) {
+    rotacionDerecha(nodo->obtDerecho());
+    rotacionIzquierda(nodo);
+}

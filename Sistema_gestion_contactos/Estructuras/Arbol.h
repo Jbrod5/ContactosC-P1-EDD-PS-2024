@@ -17,6 +17,15 @@ class Arbol{
         Nodo<T>* buscarPorIdRecursivo(int id, Nodo<T>* nodo);
         Nodo<T>* buscarPorContenidoRecursivo(T contenido, Nodo<T>* nodo);
 
+        int altura(Nodo<T>* nodo);
+        int calcularFactorBalanceo(Nodo<T>* nodo);
+        void balancearRecursivo(Nodo<T>* nodo);
+
+        void rotacionIzquierda(Nodo<T>* nodo);
+        void rotacionDerecha(Nodo<T>* nodo);
+        void rotacionIzquierdaDerecha(Nodo<T>* nodo);
+        void rotacionDerechaIzquierda(Nodo<T>* nodo);
+
 
      
     public:
@@ -28,7 +37,7 @@ class Arbol{
         Nodo<T>* buscarPorId(int id);
         Nodo<T>* buscarPorContenido(T contenido);
        
-       void balancearArbol();
+       void balancear();
 
 };      
 
