@@ -1,17 +1,16 @@
 CPP = g++
 TARGET = contactos
 
-#all
-all: .all-post
+# all
+all: $(TARGET)
 
-.all-post: Nodo.o Arbol.o Main.o
-		$(CPP) Nodo.o  Arbol.o Main.o -o $(TARGET)
+$(TARGET): Main.o
+	$(CPP) Main.o -o $(TARGET)
 
-Nodo.o: Nodo.h
-Arbol.o: Arbol.h
-Main.o: 
-		$(CPP) -c Main.cpp
+#Las definiciones que necesita Main para funcionar estan en los archivos Nodo.h y Arbol.h
+Main.o: Main.cpp Nodo.h Arbol.h
+	$(CPP) -c Main.cpp
 
-#clean
+# clean
 clean:
 	rm -f *.o $(TARGET)

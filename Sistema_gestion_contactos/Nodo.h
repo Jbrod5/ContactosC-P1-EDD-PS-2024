@@ -21,47 +21,48 @@ class Nodo{
 
         T obtDato();
         int obtId(); 
+};
 
-Nodo<T>(T dato, int id){
+template<typename T>
+Nodo<T>::Nodo(T dato, int id){
     this->dato = dato;
-    this->id = id; 
+    this->id = id;
     izquierdo = nullptr;
     derecho = nullptr;
 }
 
-
-Nodo<T>* obtIzquierdo(){
+template<typename T>
+Nodo<T>* Nodo<T>::obtIzquierdo(){
     return izquierdo;
 }
 
-
-Nodo<T>* obtDerecho(){
+template<typename T>
+Nodo<T>* Nodo<T>::obtDerecho(){
     return derecho;
 }
 
 
-
-void insertarIzquierdo(Nodo<T>* nodo){
-    izquierdo = nodo; 
+template<typename T>
+void Nodo<T>::insertarIzquierdo(Nodo<T>* nodo){
+    izquierdo = nodo;
 }
 
 
-void insertarDerecho(Nodo<T>* nodo){
-    derecho = nodo; 
+template<typename T>
+void Nodo<T>::insertarDerecho(Nodo<T>* nodo){
+    derecho = nodo;
 }
 
 
 
-T obtDato(){
+template<typename T>
+T Nodo<T>::obtDato(){
     return dato;
 }
 
-int obtId(){
-    return id; 
+template<typename T>
+int Nodo<T>::obtId(){
+    return id;
 }
-};
-
-//#include "Nodo.cpp"
-
 
 #endif

@@ -45,18 +45,17 @@ class Arbol{
        void balancear();
        void generarGrafico();
 
-};      
+};
 
-//#include "Arbol.cpp"
 template<typename T>
 Arbol<T>::Arbol(){
     raiz = nullptr;
-    cantidadNodos = 0; 
+    cantidadNodos = 0;
 }
 
 template<typename T>
 bool Arbol<T>::estaVacio(){
-    return raiz == nullptr; 
+    return raiz == nullptr;
 }
 
 /* Metodos para manejar la estructura */
@@ -95,7 +94,7 @@ void Arbol<T>::insertarRecursivo(Nodo<T>* nodo, T dato, int id){
 template<typename T>
 Nodo<T>* Arbol<T>::buscarPorId(int id){
     return buscarPorIdRecursivo(raiz, id);
-} 
+}
 
 template<typename T>
 Nodo<T>* Arbol<T>::buscarPorIdRecursivo(int id, Nodo<T>* nodo){
@@ -112,20 +111,20 @@ Nodo<T>* Arbol<T>::buscarPorIdRecursivo(int id, Nodo<T>* nodo){
             buscarPorIdRecursivo(id, nodo->obtDerecho());
         }
     }
-    return nullptr; 
-} 
+    return nullptr;
+}
 
 
 
 template<typename T>
 Nodo<T>* Arbol<T>::buscarPorContenido(T contenido){
     return buscarPorContenidoRecursivo(raiz, contenido);
-} 
+}
 template<typename T>
 Nodo<T>* Arbol<T>::buscarPorContenidoRecursivo(T contenido, Nodo<T>* nodo){
     //Verificar que no se quiera acceder a un nodo nulo
     if (nodo == nullptr ) { return nullptr; }
-        
+
     if(nodo->obtDato() == contenido){
         return nodo;
     }else{
@@ -136,7 +135,7 @@ Nodo<T>* Arbol<T>::buscarPorContenidoRecursivo(T contenido, Nodo<T>* nodo){
             buscarPorContenidoRecursivo(contenido,nodo->obtDerecho());
         }
     }
-    return nullptr; 
+    return nullptr;
 }
 
 
