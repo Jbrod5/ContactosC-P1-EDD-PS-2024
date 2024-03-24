@@ -1,5 +1,5 @@
-#include "Arbol.h"
-#include "Nodo.h"
+#include "./Estructuras/Nodo.h"
+#include "./Estructuras/Arbol.h"
 #include <iostream>
 
 using namespace std; 

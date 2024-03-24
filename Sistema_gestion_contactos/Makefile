@@ -1,16 +1,18 @@
 CPP = g++
-TARGET = contactos
+TARGET = ../Binario_compilado/contactos
+OBJ_DIR = ./obj
+ESTRUCTURAS = ./Estructuras
 
 # all
 all: $(TARGET)
 
-$(TARGET): Main.o
-	$(CPP) Main.o -o $(TARGET)
+$(TARGET): $(OBJ_DIR)/Main.o
+	$(CPP) $(OBJ_DIR)/Main.o -o $(TARGET)
 
 #Las definiciones que necesita Main para funcionar estan en los archivos Nodo.h y Arbol.h
-Main.o: Main.cpp Nodo.h Arbol.h
-	$(CPP) -c Main.cpp
+$(OBJ_DIR)/Main.o: Main.cpp $(ESTRUCTURAS)/Nodo.h $(ESTRUCTURAS)/Arbol.h
+	$(CPP) -c Main.cpp -o $(OBJ_DIR)/Main.o
 
 # clean
 clean:
-	rm -f *.o $(TARGET)
+	rm -f $(OBJ_DIR)/*.o $(TARGET)
