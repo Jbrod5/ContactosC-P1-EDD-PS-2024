@@ -1,7 +1,53 @@
-#include "Arbol.h"
+#ifndef ARBOL_H
+#define ARBOL_H
+
 #include "Nodo.h"
+#include <fstream>
+#include <iostream>
+using namespace std; 
+
+template<typename T>
+class Arbol{
 
 
+    private:
+        bool vacio;
+        int cantidadNodos; 
+        Nodo<T>* raiz;
+
+
+        void insertarRecursivo(Nodo<T>* nodo, T dato, int id);
+
+        Nodo<T>* buscarPorIdRecursivo(int id, Nodo<T>* nodo);
+        Nodo<T>* buscarPorContenidoRecursivo(T contenido, Nodo<T>* nodo);
+
+        int altura(Nodo<T>* nodo);
+        int calcularFactorBalanceo(Nodo<T>* nodo);
+        void balancearRecursivo(Nodo<T>* nodo);
+
+        void rotacionIzquierda(Nodo<T>* nodo);
+        void rotacionDerecha(Nodo<T>* nodo);
+        void rotacionIzquierdaDerecha(Nodo<T>* nodo);
+        void rotacionDerechaIzquierda(Nodo<T>* nodo);
+
+        void generarGraficoRecursivo(Nodo<T>* nodo, std::ofstream& archivo);
+
+     
+    public:
+        Arbol();
+        bool estaVacio();
+        void insertar(T dato, int id);
+
+
+        Nodo<T>* buscarPorId(int id);
+        Nodo<T>* buscarPorContenido(T contenido);
+       
+       void balancear();
+       void generarGrafico();
+
+};      
+
+//#include "Arbol.cpp"
 template<typename T>
 Arbol<T>::Arbol(){
     raiz = nullptr;
@@ -17,7 +63,7 @@ bool Arbol<T>::estaVacio(){
 template<typename T>
 void Arbol<T>::insertar(T dato, int id){
     if(estaVacio()){
-        raiz = new Nodo(dato, id);
+        raiz = new Nodo<T>(dato, id);
     }else{
         insertarRecursivo(raiz, dato, id);
     }
@@ -84,11 +130,10 @@ Nodo<T>* Arbol<T>::buscarPorContenidoRecursivo(T contenido, Nodo<T>* nodo){
         return nodo;
     }else{
         if(nodo->obtIzquierdo() != nullptr){
-            buscarPorContenidoRecursivo(dato, nodo->obtIzquierdo());
+            buscarPorContenidoRecursivo(contenido, nodo->obtIzquierdo());
         }
         if(nodo->obtDerecho() != nullptr){
-            buscarPorContenidoRecursivo(dato,
-             nodo->obtDerecho());
+            buscarPorContenidoRecursivo(contenido,nodo->obtDerecho());
         }
     }
     return nullptr; 
@@ -195,3 +240,47 @@ void Arbol<T>::rotacionDerechaIzquierda(Nodo<T>* nodo) {
     rotacionDerecha(nodo->obtDerecho());
     rotacionIzquierda(nodo);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+template<typename T>
+void Arbol<T>::generarGrafico() {
+    std::ofstream archivo("arbol.dot");
+    archivo << "digraph ArbolBinario {\n";
+    generarGraficoRecursivo(raiz, archivo);
+    archivo << "}\n";
+    archivo.close();
+    system("dot -Tpng arbol.dot -o arbol.png");
+    cout<<"Grafo generado correctamente!"<<endl;
+}
+
+template<typename T>
+void Arbol<T>::generarGraficoRecursivo(Nodo<T>* nodo, std::ofstream& archivo) {
+    if (nodo == nullptr) {
+        return;
+    }
+
+    archivo << nodo->obtId() << " [label=\"" << nodo->obtDato() << "\"];\n";
+
+    if (nodo->obtIzquierdo() != nullptr) {
+        archivo << nodo->obtId() << " -> " << nodo->obtIzquierdo()->obtId() << " [label=\"izquierdo\"];\n";
+        generarGraficoRecursivo(nodo->obtIzquierdo(), archivo);
+    }
+
+    if (nodo->obtDerecho() != nullptr) {
+        archivo << nodo->obtId() << " -> " << nodo->obtDerecho()->obtId() << " [label=\"derecho\"];\n";
+        generarGraficoRecursivo(nodo->obtDerecho(), archivo);
+    }
+}
+
+
+#endif
