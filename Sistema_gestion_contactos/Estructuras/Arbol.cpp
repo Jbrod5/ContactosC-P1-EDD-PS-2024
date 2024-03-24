@@ -103,6 +103,32 @@ Nodo<T>* Arbol<T>::buscarPorContenidoRecursivo(T contenido, Nodo<T>* nodo){
 
 
 /* -- CODIGO POR REVISAR -- */
+
+template<typename T>
+int Arbol<T>::calcularFactorBalanceo(Nodo<T>* nodo) {
+    return altura(nodo->obtIzquierdo()) - altura(nodo->obtDerecho());
+}
+
+template<typename T>
+int Arbol<T>::altura(Nodo<T>* nodo) {
+    if (nodo == nullptr) {
+        return 0;
+    }
+
+    int alturaIzquierdo = altura(nodo->obtIzquierdo());
+    int alturaDerecho = altura(nodo->obtDerecho());
+
+    if (alturaIzquierdo > alturaDerecho) {
+        return 1 + alturaIzquierdo;
+    } else {
+        return 1 + alturaDerecho;
+    }
+}
+
+
+
+
+
 template<typename T>
 void Arbol<T>::balancear() {
     balancearRecursivo(raiz);
@@ -134,22 +160,7 @@ void Arbol<T>::balancearRecursivo(Nodo<T>* nodo) {
     balancearRecursivo(nodo->obtDerecho());
 }
 
-template<typename T>
-int Arbol<T>::calcularFactorBalanceo(Nodo<T>* nodo) {
-    return altura(nodo->obtIzquierdo()) - altura(nodo->obtDerecho());
-}
 
-template<typename T>
-int Arbol<T>::altura(Nodo<T>* nodo) {
-    if (nodo == nullptr) {
-        return 0;
-    }
-
-    int alturaIzquierdo = altura(nodo->obtIzquierdo());
-    int alturaDerecho = altura(nodo->obtDerecho());
-
-    return 1 + std::max(alturaIzquierdo, alturaDerecho);
-}
 
 template<typename T>
 void Arbol<T>::rotacionIzquierda(Nodo<T>* nodo) {
