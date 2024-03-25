@@ -25,6 +25,7 @@ class Campos{
         ArbolBase** arboles; // Cada espacio de arboles tendra un tipo de arbol distinto 
         
         int hash(string nombreCampo);
+        string obtenerPorId(int id, int posicionArbol);
 
     public: 
         void agregarCampo(string nombreCampo, int tipo); // el nombre es el hash, el tipo es un enum: STRING, INT, DATE, ETC 
@@ -33,7 +34,6 @@ class Campos{
         void insertar(string nombreCampo, string dato);
 
         string obtenerPorContenido(string nombreCampo, string dato);
-        string obtenerPorId(int id);
 };
 
 #endif
@@ -148,9 +148,12 @@ string Campos::obtenerPorContenido(string nombreCampo, string dato){
     string resultado; 
 
     ArbolBase* dondeBuscarPorDato = arboles[posicionArbol];
+    
 
-    //2. Obtener el nodo con la informacion que buscamos
-    if (typeid(*dondeBuscarPorDato) == typeid(ArbolChar)) {
+    //2. Obtener el nodo con la informacion que buscamos y agregarla al resultado, ademas de obtener el id para buscar en los demas arboles
+    if(dondeBuscarPorDato != nullptr){
+
+        if (typeid(*dondeBuscarPorDato) == typeid(ArbolChar)) {
             tipo = "Arbol Char";
             char caracter = dato[0];
             Nodo<char>* encontrado;  
@@ -200,7 +203,77 @@ string Campos::obtenerPorContenido(string nombreCampo, string dato){
             } else{
                 resultado = "Hubo un error en Campos.h al buscar " + dato + " en " + nombreCampo + " ya que no se encontro un nodo con el dato solicitado. Tipo de arbol: " + tipo;
             }
-            
-        }
+        }      
+    }
+    resultado += "\n"; 
 
+    for (int i = 0; i < tamanio; i++)
+    {
+        if(i != posicionArbol){
+            resultado += obtenerPorId(id, i);
+        }
+    }
+        
+    return resultado += "\n\n\n";
+}
+
+string Campos::obtenerPorId(int id, int posicionArbol){
+    string tipo; 
+    string resultado = ""; 
+    string nombreCampo; 
+
+    ArbolBase* dondeBuscarPorDato = arboles[posicionArbol];
+    nombreCampo = dondeBuscarPorDato->nombreCampo;
+
+    // Obtener el nodo con la informacion que buscamos y agregarla al resultado
+    if(dondeBuscarPorDato != nullptr){
+        if (typeid(*dondeBuscarPorDato) == typeid(ArbolChar)) {
+            tipo = "Arbol Char";
+            Nodo<char>* encontrado;  
+            encontrado = (static_cast<ArbolChar*>(dondeBuscarPorDato))->buscarPorId(id);
+            if(encontrado != nullptr){
+                resultado += dondeBuscarPorDato->nombreCampo + ": " + encontrado->obtDato();
+            } else{
+                resultado = "Hubo un error en Campos.h al buscar el id " + std::to_string(id) + " en " + nombreCampo + " ya que no se encontro un nodo con el id solicitado. Tipo de arbol: " + tipo;
+            }
+
+
+
+        } else if(typeid(*dondeBuscarPorDato) == typeid(ArbolDate)){
+            tipo = "ArbolDate";
+            Nodo<Date*>* encontrado; 
+            encontrado = (static_cast<ArbolDate*>(dondeBuscarPorDato))->buscarPorId(id);
+            if(encontrado != nullptr){
+                Date* fecha = encontrado->obtDato();
+                resultado += dondeBuscarPorDato->nombreCampo + ": " + fecha->obtFecha();
+            } else{
+                resultado = "Hubo un error en Campos.h al buscar el id " + std::to_string(id) + " en " + nombreCampo + " ya que no se encontro un nodo con el id solicitado. Tipo de arbol: " + tipo;
+            }
+
+
+        }else if (typeid(*dondeBuscarPorDato) == typeid(ArbolString)){
+            tipo = "ArbolString";
+            Nodo<string>* encontrado; 
+            encontrado = (static_cast<ArbolString*>(dondeBuscarPorDato))-> buscarPorId(id);
+            if(encontrado != nullptr){
+                resultado += dondeBuscarPorDato->nombreCampo + ": " + encontrado->obtDato();
+            } else{
+              resultado = "Hubo un error en Campos.h al buscar el id " + std::to_string(id) + " en " + nombreCampo + " ya que no se encontro un nodo con el id solicitado. Tipo de arbol: " + tipo;
+           }
+
+
+        }else if (typeid(*dondeBuscarPorDato) == typeid(ArbolInt)){
+            tipo = "ArbolInt";
+            Nodo<int>* encontrado;
+            encontrado = (static_cast<ArbolInt*>(dondeBuscarPorDato))-> buscarPorId(id);
+            if(encontrado != nullptr){
+                resultado += dondeBuscarPorDato->nombreCampo + ": " + to_string(encontrado->obtDato());
+            } else{
+                resultado = "Hubo un error en Campos.h al buscar el id " + std::to_string(id) + " en " + nombreCampo + " ya que no se encontro un nodo con el id solicitado. Tipo de arbol: " + tipo;
+            }
+
+        }
+    }
+    resultado += "\n";
+    return resultado; 
 }
