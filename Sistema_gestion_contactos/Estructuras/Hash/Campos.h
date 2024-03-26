@@ -23,27 +23,35 @@ class Campos{
         int uso;    
         int tamanio; 
         ArbolBase** arboles; // Cada espacio de arboles tendra un tipo de arbol distinto 
+        string grupo; //Nombre del grupo al que pertenece 
         
         int hash(string nombreCampo);
         string obtenerPorId(int id, int posicionArbol);
 
     public: 
-        void agregarCampo(string nombreCampo, int tipo); // el nombre es el hash, el tipo es un enum: STRING, INT, DATE, ETC 
-        Campos(int cantidadCampos);
+        void agregarCampo(string nombreCampo, int tipo); // el nombre es el hash, el tipo es un enum: STRING, INT, DATE, ETC (enum)
+        Campos(int cantidadCampos, string grupo); //grupo es el grupo al que pertenece el campo
 
         void insertar(string nombreCampo, string dato);
 
         string obtenerPorContenido(string nombreCampo, string dato);
+
+        string obtenerGrupo();
 };
 
 #endif
 
 
 /* Definiciones */
-Campos::Campos(int  cantidadCampos){
+Campos::Campos(int  cantidadCampos, string grupo){
     uso = 0; 
     arboles = new ArbolBase*[cantidadCampos];
     tamanio = cantidadCampos;
+    this-> grupo = grupo;
+}
+
+string Campos::obtenerGrupo(){
+    return grupo; 
 }
 
 int Campos::hash(string nombreCampo){
