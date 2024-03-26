@@ -4,6 +4,8 @@
 
 #include "Arbol.h"
 #include "Campos.h"
+#include "../TiposCamposEnum.h"
+using namespace std; 
 
 class Grupos{
 
@@ -20,7 +22,7 @@ class Grupos{
         Grupos();
 
         //Campos sera la instruccion con todos los campos, por ejemplo:  FIELDS (nombre STRING, apellido STRING, celular INTEGER)
-        void agregarGrupo(string nombreGrupo, string campos); //Agrega un nuevo grupo "campo"
+        void agregarGrupo(string nombreGrupo, string campos); //Agrega un nuevo grupo "campo", campos: (nombre STRING, apellido STRING, celular INTEGER)
         void agregarContacto(string nombreGrupo, string valoresContacto);
 
         string obtenerContacto(string nombreGrupo, string campoABuscar, string valorABuscar); //Retorna la tupla de un contacto en base a un nombre de grupo(para hacer hash y obtener la posicion en el array), y usa internamente la funcion obtenerTupla
@@ -78,4 +80,52 @@ void Grupos::reHash(){
         }
     }
     grupos = gruposTemporal;
+}
+
+// Ejemplo de paso de parametro "campos": (nombre STRING, apellido STRING, celular INTEGER);
+void Grupos::agregarGrupo(string nombreGrupo, string campos){
+    // Quitar ( y  );
+    if (campos[0]                 == '(' ){ campos.erase(0                 , 1 ); }
+    if (campos[campos.length()-1] == ';' ){ campos.erase(campos.length()-1 , 1 ); }
+    if (campos[campos.length()-1] == ')' ){ campos.erase(campos.length()-1 , 1 ); }
+    // Agregar el grupo
+    int posicionGrupo = hash(nombreGrupo);
+    grupos[posicionGrupo] = new Campos(10, nombreGrupo);
+
+    // Separar los " " y operar
+    string acumulador; 
+    string campo; 
+    string tipo; 
+    for (int i = 0; i < campos.length(); i++)
+    {
+        if(campos[i] != ' '){
+            acumulador += campos[i];
+        }else{
+            // Establecer par clave valor
+            if(campo.empty()){
+                campo = acumulador;
+            }else if(tipo.empty()){
+                tipo = acumulador;
+            }
+
+            // Verificar que haya par clave valor para agregar el tipo 
+            if(campo.length() > 0 && tipo.length() > 0){
+                
+                if(tipo == "INTEGER"){
+                    grupos[posicionGrupo]->agregarCampo(campo, INTEGER);
+                }else if(tipo == "STRING"){
+                    grupos[posicionGrupo]->agregarCampo(campo, STRING);
+                }else if(tipo == "CHAR"){
+                    grupos[posicionGrupo]->agregarCampo(campo, CHAR);
+                }else if(tipo == "DATE"){
+                    grupos[posicionGrupo]->agregarCampo(campo, DATE);
+                }else{
+                    cout<<endl<<endl<<endl<<"Error en Grupos.h en funcion AgregarGrupo: " << endl; 
+                    cout<<"Se intento agregar un grupo pero no se reconocio el tipo deseado."<<endl;
+                    cout<<"Tipo que se quiso agregar: " <<tipo<<endl<<endl<<endl; 
+                }
+            }
+        }
+    }
+    
 }

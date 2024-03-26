@@ -87,7 +87,7 @@ void Campos::agregarCampo(string nombreCampo, int tipo){
         case CHAR:
             arboles[posicion] = new ArbolChar(nombreCampo);
             break; 
-        case CADENA:
+        case STRING:
             arboles[posicion] = new ArbolString(nombreCampo);
             break; 
         case DATE:

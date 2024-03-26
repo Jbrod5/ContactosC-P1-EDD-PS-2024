@@ -1,6 +1,6 @@
 enum TiposCampos{
     INTEGER, 
-    CADENA, 
+    STRING, 
     CHAR, 
     DATE
 };
