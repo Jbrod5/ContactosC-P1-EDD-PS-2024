@@ -22,12 +22,13 @@ class Grupos{
         Grupos();
 
         //Campos sera la instruccion con todos los campos, por ejemplo:  FIELDS (nombre STRING, apellido STRING, celular INTEGER)
+        void agregarGrupo(string instrGrupoAAgregar); //Agrega un nuevo grupo con la instruccion completa: ADD NEW-GROUP clientes FIELDS (nombre STRING, apellido STRING, celular INTEGER);
         void agregarGrupo(string nombreGrupo, string campos); //Agrega un nuevo grupo "campo", campos: (nombre STRING, apellido STRING, celular INTEGER)
         void agregarContacto(string instrContactoAAgregar); //Agrega una nueva tupla de la siguiente manera: ADD CONTACT IN amigos FIELDS (Pedro, Alvarez, 12345678, 02-05-1998);
 
         string obtenerContacto(string instrContactoABuscar);
-        string obtenerContacto(string nombreGrupo, string campoABuscar, string valorABuscar); //Retorna la tupla de un contacto en base a un nombre de grupo(para hacer hash y obtener la posicion en el array), y usa internamente la funcion obtenerTupla
-        string obtenerTupla(string campo, string valorABuscar); //Retorna la tupla de un contacto en base a un campo y un valor, asi: [campo]=[DatoQueBusca]
+        //string obtenerContacto(string nombreGrupo, string campoABuscar, string valorABuscar); //Retorna la tupla de un contacto en base a un nombre de grupo(para hacer hash y obtener la posicion en el array), y usa internamente la funcion obtenerTupla
+        //string obtenerTupla(string campo, string valorABuscar); //Retorna la tupla de un contacto en base a un campo y un valor, asi: [campo]=[DatoQueBusca]
 };
 #endif
 
@@ -84,14 +85,32 @@ void Grupos::reHash(){
     grupos = gruposTemporal;
 }
 
+// Ejemplo de cadena esperada: ADD NEW-GROUP clientes FIELDS (nombre STRING, apellido STRING, celular INTEGER);
+void Grupos::agregarGrupo(string instrGrupoAAgregar){
+    // Eliminar |ADD NEW-GROUP | -> 14 caracteres
+    instrGrupoAAgregar.erase(0, 14);
+
+    // Obtener el nombre del grupo
+    string grupo = "";
+    for (int i = 0; instrGrupoAAgregar[i] != ' '; i++){
+        grupo += instrGrupoAAgregar[i];
+    }
+
+    // Eliminar grupo + | FIELDS |  -> grupo.length +  8 
+    instrGrupoAAgregar.erase(0, grupo.length() + 8);
+
+    // Agregar el grupo
+    agregarGrupo(grupo, instrGrupoAAgregar);
+}
+
 
 // Ejemplo de paso de parametro "campos": (nombre STRING, apellido STRING, celular INTEGER);
 void Grupos::agregarGrupo(string nombreGrupo, string campos){
     // Quitar ( y  );
     if (campos[0]                 == ' ' ){ campos.erase(0                 , 1 ); }
     if (campos[0]                 == '(' ){ campos.erase(0                 , 1 ); }
-    if (campos[campos.length()-1] == ';' ){ campos.erase(campos.length()-1 , 1 ); }
-    if (campos[campos.length()-1] == ')' ){ campos.erase(campos.length()-1 , 1 ); }
+    if (campos[campos.length()-1] == ';' ){ campos.erase(campos.length()-2 , 1 ); }
+    if (campos[campos.length()-1] == ')' ){ campos.erase(campos.length()-2 , 1 ); }
     // Agregar el grupo
     int posicionGrupo = hash(nombreGrupo);
     if(grupos[posicionGrupo] == nullptr){
