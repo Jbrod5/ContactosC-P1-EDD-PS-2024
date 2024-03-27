@@ -24,6 +24,7 @@ class Campos{
         int tamanio; 
         ArbolBase** arboles; // Cada espacio de arboles tendra un tipo de arbol distinto 
         string grupo; //Nombre del grupo al que pertenece 
+        string listaOrdenCampos; //Este string contiene el orden de los campos para insertar tuplas asi: nombre,telefono,direccion
         
         int hash(string nombreCampo);
         string obtenerPorId(int id, int posicionArbol);
@@ -33,6 +34,7 @@ class Campos{
         Campos(int cantidadCampos, string grupo); //grupo es el grupo al que pertenece el campo
 
         void insertar(string nombreCampo, string dato);
+        void insertarTuplaOrdenada(string valoresAInsertar); //Inserta de manera ordenada una tupla en base a listaOrdenCampos
 
         string obtenerPorContenido(string nombreCampo, string dato);
 
@@ -94,11 +96,19 @@ void Campos::agregarCampo(string nombreCampo, int tipo){
             arboles[posicion] = new ArbolDate(nombreCampo);
             break;
         }
+        
+        cout<<"Se ha agregado un campo nuevo en Campos.h - agregarCampo."<<endl;
+        cout<<"Nombre del campo agregado: " <<nombreCampo<<endl; 
+        cout<<"Posicion otorgada por funcion hash: "<<nombreCampo<<endl; 
+    }else{
+        cout<<"Ocurrio una colision al intentar agregar un campo en Campos.h - agregarCampo."<<endl;
+        cout<<"Nombre del campo que se quiso agregar: " <<nombreCampo<<endl; 
+        cout<<"Posicion otorgada por funcion hash: "<<nombreCampo<<endl; 
     }
 }
 
 void Campos::insertar(string nombreCampo, string dato){
-    uso++; 
+
     int posicion = hash(nombreCampo);
     ArbolBase* dondeInsertar = arboles[posicion];
     string tipo = "a"; 
@@ -135,6 +145,14 @@ void Campos::insertar(string nombreCampo, string dato){
             (static_cast<ArbolInt*>(dondeInsertar))-> insertar(datoCastToInt, uso);
 
         }
+
+            
+        uso++;
+        listaOrdenCampos += nombreCampo + ",";
+        cout << endl << endl << "Hubo una insersion en la clase Campos (Campos.h)." << endl;
+        cout << "Nombre del campo insertado: " << nombreCampo << endl;
+        cout << "Posicion en la tabla proporcionada por la funcion hash: " << std::to_string(posicion) << endl << endl << endl;
+  
     }catch(const std::exception& e){
         cout << endl << endl << "Error producido en la clase Campos (Campos.h) al insertar un dato." << endl;
         cout << "Nombre del campo donde se queria insertar: " << nombreCampo << endl;
@@ -143,6 +161,40 @@ void Campos::insertar(string nombreCampo, string dato){
         cout << "Tipo de arbol donde se queria insertar: " << tipo << endl << endl<< endl<< endl<< endl;
     }
 }
+
+//Estructura de string esperada: (Pedro, Alvarez, 12345678, 02-05-1998);
+void Campos::insertarTuplaOrdenada(string valoresAInsertar){
+    // Recorremos el string 
+    if (valoresAInsertar[0]                 == ' ' ){ valoresAInsertar.erase(0                 , 1 ); }    
+    if (valoresAInsertar[0]                 == '(' ){ valoresAInsertar.erase(0                 , 1 ); }
+    if (valoresAInsertar[valoresAInsertar.length()-1] == ';' ){ valoresAInsertar.erase(valoresAInsertar.length()-1 , 1 ); }
+    if (valoresAInsertar[valoresAInsertar.length()-1] == ')' ){ valoresAInsertar.erase(valoresAInsertar.length()-1 , 1 ); }
+
+    int contadorStringValores = 0; int contadorStringCampos = 0; 
+    string valor, campo; 
+
+    while(contadorStringValores < valoresAInsertar.length()){
+        // Construir el valor a insertar
+        while(valoresAInsertar[contadorStringValores] != ','){
+            valor += valoresAInsertar[contadorStringValores];
+            contadorStringValores++;
+        }
+        // Construir el campo donde insertar
+        while(listaOrdenCampos[contadorStringCampos] != ','){
+            campo += listaOrdenCampos[contadorStringCampos];
+            contadorStringCampos++;
+        }
+        // Llamar internamente a insertar
+        insertar(campo, valor);
+        
+        //Limpiar los acumuladores
+        if(valoresAInsertar[contadorStringValores] == ','){valor = "";}
+        if(listaOrdenCampos[contadorStringValores] == ','){campo = "";}
+    }
+
+}
+
+
 
 // Esta funcion debe retornar todos los datos guardados en los demas arboles 
 // Inicia obteniendo un nodo en base al contenido
