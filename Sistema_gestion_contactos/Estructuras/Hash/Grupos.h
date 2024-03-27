@@ -136,6 +136,11 @@ void Grupos::agregarGrupo(string nombreGrupo, string campos){
         {
             if(campos[i] != ' '){
                 acumulador += campos[i];
+                if(acumulador.length() > 2){
+                    if(acumulador[acumulador.length()-1] == ','){
+                        acumulador.erase(acumulador.length()-2, 1);
+                    }
+                }
             }else{
                 // Establecer par clave valor
                 if(campo.empty()){
