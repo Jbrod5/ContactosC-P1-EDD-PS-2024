@@ -23,8 +23,9 @@ class Grupos{
 
         //Campos sera la instruccion con todos los campos, por ejemplo:  FIELDS (nombre STRING, apellido STRING, celular INTEGER)
         void agregarGrupo(string nombreGrupo, string campos); //Agrega un nuevo grupo "campo", campos: (nombre STRING, apellido STRING, celular INTEGER)
-        void agregarContacto(string nombreGrupo, string valoresContacto); //Agrega una nueva tupla de la siguiente manera: ADD CONTACT IN amigos FIELDS (Pedro, Alvarez, 12345678, 02-05-1998);
+        void agregarContacto(string instrContactoAAgregar); //Agrega una nueva tupla de la siguiente manera: ADD CONTACT IN amigos FIELDS (Pedro, Alvarez, 12345678, 02-05-1998);
 
+        string obtenerContacto(string instrContactoABuscar);
         string obtenerContacto(string nombreGrupo, string campoABuscar, string valorABuscar); //Retorna la tupla de un contacto en base a un nombre de grupo(para hacer hash y obtener la posicion en el array), y usa internamente la funcion obtenerTupla
         string obtenerTupla(string campo, string valorABuscar); //Retorna la tupla de un contacto en base a un campo y un valor, asi: [campo]=[DatoQueBusca]
 };
@@ -82,6 +83,7 @@ void Grupos::reHash(){
     }
     grupos = gruposTemporal;
 }
+
 
 // Ejemplo de paso de parametro "campos": (nombre STRING, apellido STRING, celular INTEGER);
 void Grupos::agregarGrupo(string nombreGrupo, string campos){
@@ -168,3 +170,60 @@ int Grupos::contarTipos(string cadena){
 
     return cantidadTipos; 
 }
+
+// Estructura de string esperada: ADD CONTACT IN amigos FIELDS (Pedro, Alvarez, 12345678, 02-05-1998);
+void Grupos::agregarContacto(string instrContactoAAgregar){
+
+    // Eliminar ADD CONTACT IN -> Son 15 caracteres 
+    instrContactoAAgregar.erase(0, 15);
+
+    // Obtener el grupo (desde 0 hasta " ")
+    string grupo = "";
+    int contadorString; 
+    for (contadorString = 0; instrContactoAAgregar[contadorString] != ' '; contadorString++){
+        grupo += instrContactoAAgregar[contadorString];
+    }
+
+    // Eliminar |ADD CONTACT IN grupo FIELDS | de la cadena -> Son 15 + grupo.length + 8
+    contadorString = 15 + grupo.length() + 8;
+    instrContactoAAgregar.erase(0, contadorString);
+    
+    // Insertar tupla en el grupo
+    grupos[hash(grupo)]->insertarTuplaOrdenada(instrContactoAAgregar);
+}
+
+
+// Estructura de string esperada: FIND CONTACT IN clientes CONTACT-FIELD apellido=alvarez;
+string Grupos::obtenerContacto(string instrContactoABuscar){
+
+    // Quitar |FIND CONTACT IN | de la cadena -> 16 espacios
+    instrContactoABuscar.erase(0,16);
+
+    // Obtener el grupo donde buscar
+    string grupo = "";
+    for (int i = 0; instrContactoABuscar[i] != ' '; i++){
+        grupo +=  instrContactoABuscar[i];
+    }
+
+    // quitar |grupo CONTACT-FIELD | de la cadena -> grupo.length + 15
+    instrContactoABuscar.erase(0, grupo.length()+15);
+
+    // obtener el nombre del campo
+    string nombreCampo = "";
+    for (int i = 0; instrContactoABuscar[i] != '='; i++){
+        nombreCampo += instrContactoABuscar[i];
+    }
+
+    //eliminar |campo=| de la cadena -> nombreCampo.length + 1
+    instrContactoABuscar.erase(0, nombreCampo.length()+1);
+
+    //Eliminar ; al final
+    string valor = instrContactoABuscar; 
+    if(instrContactoABuscar[instrContactoABuscar.length()-1] == ';'){    
+        instrContactoABuscar.erase(instrContactoABuscar.length()-2, 1); 
+        valor = instrContactoABuscar;
+    }
+
+    // Retornar la tupla
+    return(grupos[hash(grupo)]->obtenerPorContenido(nombreCampo, valor));
+} 

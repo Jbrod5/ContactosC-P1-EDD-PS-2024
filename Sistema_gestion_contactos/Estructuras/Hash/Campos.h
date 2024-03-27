@@ -1,4 +1,4 @@
-/* Contiene la loica para manejar la tabla hash de CAMPOS */
+/* Contiene la logica para manejar la tabla hash de CAMPOS */
 
 #ifndef CAMPOS_H
 #define CAMPOS_H
@@ -173,23 +173,29 @@ void Campos::insertarTuplaOrdenada(string valoresAInsertar){
     int contadorStringValores = 0; int contadorStringCampos = 0; 
     string valor, campo; 
 
-    while(contadorStringValores < valoresAInsertar.length()){
-        // Construir el valor a insertar
-        while(valoresAInsertar[contadorStringValores] != ','){
+    while(contadorStringValores < valoresAInsertar.length() && contadorStringCampos < listaOrdenCampos.length()){
+
+        while(valoresAInsertar[contadorStringValores] != ','  ){
             valor += valoresAInsertar[contadorStringValores];
             contadorStringValores++;
+            if(valoresAInsertar[contadorStringValores] == ','){ contadorStringValores++; } // salimos de la coma  
+            if(valoresAInsertar[contadorStringValores] == ' '){ contadorStringValores++; } // salimos del espacio
         }
+
         // Construir el campo donde insertar
         while(listaOrdenCampos[contadorStringCampos] != ','){
             campo += listaOrdenCampos[contadorStringCampos];
             contadorStringCampos++;
+            if (listaOrdenCampos[contadorStringCampos] == ','){ contadorStringCampos++; }// salimos de la coma
+            if (listaOrdenCampos[contadorStringCampos] == ' '){ contadorStringCampos++; }// salimos del espacio
         }
+
         // Llamar internamente a insertar
         insertar(campo, valor);
         
         //Limpiar los acumuladores
-        if(valoresAInsertar[contadorStringValores] == ','){valor = "";}
-        if(listaOrdenCampos[contadorStringValores] == ','){campo = "";}
+        valor = "";
+        campo = "";
     }
 
 }
