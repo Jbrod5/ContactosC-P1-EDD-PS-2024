@@ -39,6 +39,8 @@ class Campos{
         string obtenerPorContenido(string nombreCampo, string dato);
 
         string obtenerGrupo();
+        string obtenerGrafo();
+        
 };
 
 #endif
@@ -97,6 +99,7 @@ void Campos::agregarCampo(string nombreCampo, int tipo){
             break;
         }
         
+        listaOrdenCampos+= nombreCampo+",";
         cout<<"Se ha agregado un campo nuevo en Campos.h - agregarCampo."<<endl;
         cout<<"Nombre del campo agregado: " <<nombreCampo<<endl; 
         cout<<"Posicion otorgada por funcion hash: "<<posicion<<endl; 
@@ -148,7 +151,6 @@ void Campos::insertar(string nombreCampo, string dato){
 
             
         uso++;
-        listaOrdenCampos += nombreCampo + ",";
         cout << endl << endl << "Hubo una insersion en la clase Campos (Campos.h)." << endl;
         cout << "Nombre del campo insertado: " << nombreCampo << endl;
         cout << "Posicion en la tabla proporcionada por la funcion hash: " << std::to_string(posicion) << endl << endl << endl;
@@ -169,29 +171,36 @@ void Campos::insertarTuplaOrdenada(string valoresAInsertar){
     if (valoresAInsertar[0]                 == '(' ){ valoresAInsertar.erase(0                 , 1 ); }
     if (valoresAInsertar[valoresAInsertar.length()-1] == ';' ){ valoresAInsertar.erase(valoresAInsertar.length()-1 , 1 ); }
     if (valoresAInsertar[valoresAInsertar.length()-1] == ')' ){ valoresAInsertar.erase(valoresAInsertar.length()-1 , 1 ); }
+    cout<<"Instruccion limpiada: "<<valoresAInsertar<<endl;
 
     int contadorStringValores = 0; 
     int contadorStringCampos = 0; 
     string valor, campo; 
 
-    while(contadorStringValores < valoresAInsertar.length() && contadorStringCampos < listaOrdenCampos.length()){
+    cout<<"Lista orden campos: " << listaOrdenCampos << " | long: " << listaOrdenCampos.length()<<endl; 
 
-        while(valoresAInsertar[contadorStringValores] != ','  ){
+    while(contadorStringValores < valoresAInsertar.length() && contadorStringCampos < listaOrdenCampos.length()){
+        cout<<"Dentro del wail c:"<<endl; 
+        while(contadorStringValores <  valoresAInsertar.length() && valoresAInsertar[contadorStringValores] != ','  ){
             valor += valoresAInsertar[contadorStringValores];
             contadorStringValores++;
-            if(valoresAInsertar[contadorStringValores] == ','){ contadorStringValores++; } // salimos de la coma  
-            if(valoresAInsertar[contadorStringValores] == ' '){ contadorStringValores++; } // salimos del espacio
+            if(valoresAInsertar[contadorStringValores] == ','){ contadorStringValores++; break; } // salimos de la coma  
+            if(valoresAInsertar[contadorStringValores] == ' '){ /*contadorStringValores++;*/ valor = ""; } // salimos del espacio
         }
 
         // Construir el campo donde insertar
-        while(listaOrdenCampos[contadorStringCampos] != ','){
+        while(contadorStringCampos < listaOrdenCampos.length() && listaOrdenCampos[contadorStringCampos] != ','){
             campo += listaOrdenCampos[contadorStringCampos];
             contadorStringCampos++;
-            if (listaOrdenCampos[contadorStringCampos] == ','){ contadorStringCampos++; }// salimos de la coma
-            if (listaOrdenCampos[contadorStringCampos] == ' '){ contadorStringCampos++; }// salimos del espacio
+            if (listaOrdenCampos[contadorStringCampos] == ','){ contadorStringCampos++; break; }// salimos de la coma
+            if (listaOrdenCampos[contadorStringCampos] == ' '){ /*contadorStringCampos++;*/ campo = ""; }// salimos del espacio
         }
 
         // Llamar internamente a insertar
+        cout<<"Campos.h: insertarTuplaOrdenada()"<<endl;
+        cout<<"Campo donde insertar: "<<campo<<endl;
+        cout<<"Valor a insertar: "<<valor<<endl;  
+
         insertar(campo, valor);
         
         //Limpiar los acumuladores
@@ -343,4 +352,28 @@ string Campos::obtenerPorId(int id, int posicionArbol){
     }
     resultado += "\n";
     return resultado; 
+}
+
+string Campos::obtenerGrafo(){
+    string grafo = "digraph "+ grupo + "{\n}";
+    for (int i = 0; i < tamanio; i++){
+        if (arboles[i] != nullptr){
+            grafo += to_string(i) + "[label=\""+ arboles[i]->nombreCampo+ "\"];\n";
+            grafo += to_string(i+tamanio) + "[label=\""+ to_string(i) +"\"];\n";
+            grafo += to_string(i+tamanio) + " -> " +   to_string(i) + ";";
+        }else{
+            grafo += to_string(i) + "[label=\""+ to_string(i) +"\"];\n";
+            grafo += to_string(i+tamanio) + "[label=\"nullptr\"];\n";
+            grafo += to_string(i) + " -> "+  to_string(i+tamanio)+";\n";
+        }
+    }
+
+    for (int j = 0; j < tamanio; j++)
+    {
+        if(arboles[j] != nullptr){
+            grafo+= arboles[j]->obtenerGrafo();
+        }
+    }
+    grafo+="}";
+    return grafo;
 }

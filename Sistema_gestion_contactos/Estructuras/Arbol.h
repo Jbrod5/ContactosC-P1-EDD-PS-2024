@@ -4,6 +4,9 @@
 #include "Nodo.h"
 #include <fstream>
 #include <iostream>
+#include <string>
+#include <typeinfo>
+#include "Date.h"
 using namespace std; 
 
 template<typename T>
@@ -32,9 +35,11 @@ class Arbol{
 
         void generarGraficoRecursivo(Nodo<T>* nodo, std::ofstream& archivo);
 
-     
+        string nombreCampo;
+
+        string obtenerGrafoRecursivo(Nodo<T>* nodo);
     public:
-        Arbol();
+        Arbol(string nombre);
         bool estaVacio();
         void insertar(T dato, int id);
 
@@ -45,12 +50,20 @@ class Arbol{
        void balancear();
        void generarGrafico();
 
+       string obtenerGrafo();
+       string obtenerNombreCampo();
+
+       string to_string(Date* date);
+       string to_string(int dato);
+       string to_string(string dato);
+       string to_string(char dato);
 };
 
 template<typename T>
-Arbol<T>::Arbol(){
+Arbol<T>::Arbol(string nombre){
     raiz = nullptr;
     cantidadNodos = 0;
+    nombreCampo = nombre; 
 }
 
 template<typename T>
@@ -283,4 +296,67 @@ void Arbol<T>::generarGraficoRecursivo(Nodo<T>* nodo, std::ofstream& archivo) {
 }
 
 
+template<typename T>
+string Arbol<T>::obtenerGrafo(){
+    string grafo = "subgraph " + nombreCampo +"{\n";
+    grafo+= "label=" + nombreCampo +"\n";
+    grafo += obtenerGrafoRecursivo(raiz);
+
+    grafo += "}\n";
+    cout<<"Digraph de "<< nombreCampo<< " generado correctamente."<<endl;
+    return grafo; 
+}
+
+template<typename T>
+string Arbol<T>::obtenerGrafoRecursivo(Nodo<T>* nodo){
+    string grafo = "";
+
+    if (nodo == nullptr) {
+        return grafo;
+    }
+
+    T dato = nodo->obtDato();
+    string datoString;
+    datoString = to_string(dato);
+
+
+    grafo += to_string(nodo->obtId())  + " [label=\"" + datoString  + "\"];\n";
+
+    if (nodo->obtIzquierdo() != nullptr) {
+        grafo += to_string(nodo->obtId()) + " -> " + to_string(nodo->obtIzquierdo()->obtId())   + " [label=\"izquierdo\"];\n";
+        grafo += obtenerGrafoRecursivo(nodo->obtIzquierdo());
+    }
+
+    if (nodo->obtDerecho() != nullptr) {
+        grafo += to_string(nodo->obtId())   +   " -> " + to_string(nodo->obtDerecho()->obtId())  + " [label=\"derecho\"];\n";
+        grafo += obtenerGrafoRecursivo(nodo->obtDerecho());
+    }
+    return grafo; 
+}
+
+template<typename T>
+string Arbol<T>::obtenerNombreCampo(){
+    return nombreCampo;
+}
+
+template<typename T>
+string Arbol<T>::to_string(Date* date){
+    return date->obtFecha();
+}
+template<typename T>
+string Arbol<T>::to_string(int dato){
+    return std::to_string(dato);
+}
+
+template<typename T>
+string Arbol<T>::to_string(string dato){
+    return dato; 
+}
+
+template<typename T>
+string Arbol<T>::to_string(char dato){
+    string resultado;
+    resultado+=dato; 
+    return resultado;
+}
 #endif

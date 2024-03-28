@@ -3,6 +3,8 @@
 #define GRUPOS_H
 
 #include "../Arbol.h"
+#include <fstream>
+#include <iostream>
 //#include "../TiposCamposEnum.h"
 #include "Campos.h"
 using namespace std; 
@@ -27,6 +29,7 @@ class Grupos{
         void agregarContacto(string instrContactoAAgregar); //Agrega una nueva tupla de la siguiente manera: ADD CONTACT IN amigos FIELDS (Pedro, Alvarez, 12345678, 02-05-1998);
 
         string obtenerContacto(string instrContactoABuscar);
+        void generarGrafoGrupo(string instrGenerarGrafoGrupo); //Genera un grafo de un grupo con graphviz, cadena esperada: GENERATE GRPH GROUP grupo;
         //string obtenerContacto(string nombreGrupo, string campoABuscar, string valorABuscar); //Retorna la tupla de un contacto en base a un nombre de grupo(para hacer hash y obtener la posicion en el array), y usa internamente la funcion obtenerTupla
         //string obtenerTupla(string campo, string valorABuscar); //Retorna la tupla de un contacto en base a un campo y un valor, asi: [campo]=[DatoQueBusca]
 };
@@ -205,18 +208,18 @@ void Grupos::agregarContacto(string instrContactoAAgregar){
 
     // Eliminar ADD CONTACT IN -> Son 15 caracteres 
     instrContactoAAgregar.erase(0, 15);
-
     // Obtener el grupo (desde 0 hasta " ")
     string grupo = "";
     int contadorString; 
-    for (contadorString = 0; instrContactoAAgregar[contadorString] != ' '; contadorString++){
+    for (contadorString = 0; contadorString < instrContactoAAgregar.length() && instrContactoAAgregar[contadorString] != ' '; contadorString++){
         grupo += instrContactoAAgregar[contadorString];
     }
+    cout<<"Grupos.h: Grupo donde agregar: " <<grupo<<endl;
 
-    // Eliminar |ADD CONTACT IN grupo FIELDS | de la cadena -> Son 15 + grupo.length + 8
-    contadorString = 15 + grupo.length() + 8;
+    // Eliminar |grupo FIELDS | de la cadena -> grupo.length + 8
+    contadorString = grupo.length() + 8;
     instrContactoAAgregar.erase(0, contadorString);
-    
+    cout<<"Instruccion por procesar: "<<instrContactoAAgregar<<endl;
     // Insertar tupla en el grupo
     grupos[hash(grupo)]->insertarTuplaOrdenada(instrContactoAAgregar);
 }
@@ -256,3 +259,33 @@ string Grupos::obtenerContacto(string instrContactoABuscar){
     // Retornar la tupla
     return(grupos[hash(grupo)]->obtenerPorContenido(nombreCampo, valor));
 } 
+
+void Grupos::generarGrafoGrupo(string instrGenerarGrafoGrupo){
+    //1. Remover |GENERATE GRPH GROUP | (21 caracteres)
+    if(instrGenerarGrafoGrupo.length()>21){
+        instrGenerarGrafoGrupo.erase(0,21);
+    }
+    //2. Remover ;
+    if(instrGenerarGrafoGrupo.length()>2){
+        if(instrGenerarGrafoGrupo[instrGenerarGrafoGrupo.length()-1] == ';'){
+
+            instrGenerarGrafoGrupo.erase(instrGenerarGrafoGrupo.length()-1,1);
+        }
+    }
+    //3. Lo que queda es el grupo
+    Campos* grupo = grupos[hash(instrGenerarGrafoGrupo)];
+    cout<<"|"<<instrGenerarGrafoGrupo<<"|"<<endl;
+    if(grupo != nullptr){
+        // Generar el grafo
+        string grafo = grupo->obtenerGrafo();
+        ofstream archivo(instrGenerarGrafoGrupo+".dot");
+        archivo<<grafo;
+        archivo.close();
+        string comando = "dot -Tpng " + instrGenerarGrafoGrupo + ".dot -o " + instrGenerarGrafoGrupo + ".png";
+        system(comando.c_str());
+        cout<<"Grupos.h: Grafo "+instrGenerarGrafoGrupo+" generado correctamente!"<<endl;
+    }else{
+        cout<<"Grupos.h: generarGrafoGrupo. Hubo un error al generar el grafo del grupo: "<<instrGenerarGrafoGrupo<<endl;
+        cout<<"El grupo obtenido por la funcion hash (posicion "<< hash(instrGenerarGrafoGrupo)<<" ) es nulo."<<endl; 
+    }
+}

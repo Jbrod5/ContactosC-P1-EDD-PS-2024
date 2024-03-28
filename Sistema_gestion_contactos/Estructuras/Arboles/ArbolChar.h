@@ -21,11 +21,12 @@
        
             void balancear();
             void generarGrafico();
+            string obtenerGrafo() override;
             
     };
 
     ArbolChar::ArbolChar(string nombreCampo){
-            arbol = new Arbol<char>();
+            arbol = new Arbol<char>(nombreCampo);
             this->nombreCampo = nombreCampo;
         }
 
@@ -48,6 +49,10 @@
 
     Nodo<char>* ArbolChar::buscarPorContenido(char contenido){
         return arbol->buscarPorContenido(contenido);
+    }
+
+    string ArbolChar::obtenerGrafo (){
+        return arbol->obtenerGrafo();
     }
 
 #endif

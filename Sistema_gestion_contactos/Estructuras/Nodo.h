@@ -65,4 +65,6 @@ int Nodo<T>::obtId(){
     return id;
 }
 
+
+
 #endif

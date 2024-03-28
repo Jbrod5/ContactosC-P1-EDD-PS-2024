@@ -23,11 +23,13 @@
        
             void balancear();
             void generarGrafico();
+
+            string obtenerGrafo() override;
             
     };
 
     ArbolDate::ArbolDate(std::string nombreCampo){
-            arbol = new Arbol<Date*>();
+            arbol = new Arbol<Date*>(nombreCampo);
             this->nombreCampo = nombreCampo; 
         }
 
@@ -54,4 +56,7 @@
         return arbol->buscarPorContenido(date);
     }
 
+    string ArbolDate::obtenerGrafo (){
+        return arbol->obtenerGrafo();
+    }
 #endif

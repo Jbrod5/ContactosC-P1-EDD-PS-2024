@@ -24,11 +24,12 @@ using namespace std;
        
             void balancear();
             void generarGrafico();
+            string obtenerGrafo() override;
             
     };
 
     ArbolString::ArbolString(string nombreCampo){
-            arbol = new Arbol<string>();
+            arbol = new Arbol<string>(nombreCampo);
             this->nombreCampo = nombreCampo; 
         }
 
@@ -50,5 +51,9 @@ using namespace std;
 
     Nodo<string>* ArbolString::buscarPorContenido(string contenido){
         return arbol->buscarPorContenido(contenido);
+    }
+
+    string ArbolString::obtenerGrafo (){
+        return arbol->obtenerGrafo();
     }
 #endif

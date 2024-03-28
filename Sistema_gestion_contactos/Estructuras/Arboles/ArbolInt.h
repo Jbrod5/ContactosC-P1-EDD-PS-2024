@@ -22,11 +22,13 @@
        
             void balancear();
             void generarGrafico();
+
+            string obtenerGrafo() override; 
             
     };
 
     ArbolInt::ArbolInt(std::string nombreCampo){
-        arbol = new Arbol<int>();
+        arbol = new Arbol<int>(nombreCampo);
         this->nombreCampo = nombreCampo;
     }
 
@@ -49,6 +51,10 @@
 
     Nodo<int>* ArbolInt::buscarPorContenido(int contenido){
         return arbol->buscarPorContenido(contenido);
+    }
+    
+    string ArbolInt::obtenerGrafo (){
+        return arbol->obtenerGrafo();
     }
 
 #endif

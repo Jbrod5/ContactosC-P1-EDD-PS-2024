@@ -19,6 +19,7 @@
        
             void balancear();
             void generarGrafico();
+            virtual string obtenerGrafo();
             
     };
 
@@ -29,5 +30,9 @@
     void ArbolBase::balancear(){ }
 
     void ArbolBase::generarGrafico(){ }
+
+    string ArbolBase::obtenerGrafo(){
+        return "";
+    }
 
 #endif

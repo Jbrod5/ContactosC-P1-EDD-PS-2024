@@ -8,25 +8,6 @@ using namespace std;
 
 int main() {
     
-    /*
-    // Crear un objeto de tipo Arbol<int>
-    Arbol<int>* arbol;
-    arbol = new Arbol<int>();
-
-    // Insertar nodos en el árbol
-    arbol->insertar(50, 1);
-    arbol->insertar(30, 2);
-    arbol->insertar(70, 3);
-    arbol->insertar(20, 4);
-    arbol->insertar(40, 5);
-    arbol->insertar(60, 6);
-    arbol->insertar(80, 7);
-
-    // Generar el gráfico del árbol
-    arbol->generarGrafico();
-
-    return 0;
-    */
     Grupos* grupos = new Grupos();  
     string comando = "";
     int comandoLong = 0; 
@@ -70,6 +51,13 @@ int main() {
             if(comando.substr(0,15) == "FIND CONTACT IN"){
                 cout<<"Buscar contacto reconocido."<<endl;
                 grupos->obtenerContacto(comando);
+            }
+
+        }//5. GENERATE GRAPH GROUP grupo; -> 20 caracteres
+        if(comandoLong > 19){
+            if(comando.substr(0,20) == "GENERATE GRAPH GROUP"){
+                cout<<"Generar grafo de grupo reconocido."<<endl; 
+                grupos->generarGrafoGrupo(comando);
             }
         }
 
