@@ -1,4 +1,4 @@
-enum TiposCampos{
+enum class TiposCampos{
     INTEGER, 
     STRING, 
     CHAR, 

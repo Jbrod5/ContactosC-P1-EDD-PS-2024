@@ -77,33 +77,33 @@ int Campos::hash(string nombreCampo){
 
 void Campos::agregarCampo(string nombreCampo, int tipo){
     int posicion = hash(nombreCampo);
+    cout<<endl;
     // 1. Verificar que no haya colision:
-    if(arboles[posicion] != nullptr){
-        
+    if(arboles[posicion] == nullptr){
         //2. Crear la instancia del arbol
         switch (tipo)
         {
-        case INTEGER:
+        case 1:
             arboles[posicion] = new ArbolInt(nombreCampo);
             break;
-        case CHAR:
+        case 3:
             arboles[posicion] = new ArbolChar(nombreCampo);
             break; 
-        case STRING:
+        case 2:
             arboles[posicion] = new ArbolString(nombreCampo);
             break; 
-        case DATE:
+        case 4:
             arboles[posicion] = new ArbolDate(nombreCampo);
             break;
         }
         
         cout<<"Se ha agregado un campo nuevo en Campos.h - agregarCampo."<<endl;
         cout<<"Nombre del campo agregado: " <<nombreCampo<<endl; 
-        cout<<"Posicion otorgada por funcion hash: "<<nombreCampo<<endl; 
+        cout<<"Posicion otorgada por funcion hash: "<<posicion<<endl; 
     }else{
         cout<<"Ocurrio una colision al intentar agregar un campo en Campos.h - agregarCampo."<<endl;
         cout<<"Nombre del campo que se quiso agregar: " <<nombreCampo<<endl; 
-        cout<<"Posicion otorgada por funcion hash: "<<nombreCampo<<endl; 
+        cout<<"Posicion otorgada por funcion hash: "<<posicion<<endl; 
     }
 }
 
@@ -114,7 +114,7 @@ void Campos::insertar(string nombreCampo, string dato){
     string tipo = "a"; 
 
     if(dondeInsertar == nullptr){
-        cout << endl << endl << "Error producido en la clase Campos (Campos.h) al insertar un dato." << endl;
+        cout << "Error producido en la clase Campos (Campos.h) al insertar un dato." << endl;
         cout << "Se quiso insertar un dato en un arbol nulo."<< endl ;
         cout << "Nombre del campo donde se queria insertar: " << nombreCampo << endl;
         cout << "Posicion en la tabla proporcionada por la funcion hash: " << std::to_string(posicion) << endl << endl << endl;
@@ -170,7 +170,8 @@ void Campos::insertarTuplaOrdenada(string valoresAInsertar){
     if (valoresAInsertar[valoresAInsertar.length()-1] == ';' ){ valoresAInsertar.erase(valoresAInsertar.length()-1 , 1 ); }
     if (valoresAInsertar[valoresAInsertar.length()-1] == ')' ){ valoresAInsertar.erase(valoresAInsertar.length()-1 , 1 ); }
 
-    int contadorStringValores = 0; int contadorStringCampos = 0; 
+    int contadorStringValores = 0; 
+    int contadorStringCampos = 0; 
     string valor, campo; 
 
     while(contadorStringValores < valoresAInsertar.length() && contadorStringCampos < listaOrdenCampos.length()){

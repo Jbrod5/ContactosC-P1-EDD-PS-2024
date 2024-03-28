@@ -94,7 +94,7 @@ void Arbol<T>::insertarRecursivo(Nodo<T>* nodo, T dato, int id){
 
 template<typename T>
 Nodo<T>* Arbol<T>::buscarPorId(int id){
-    return buscarPorIdRecursivo(raiz, id);
+    return buscarPorIdRecursivo(id, raiz);
 }
 
 template<typename T>
@@ -119,7 +119,7 @@ Nodo<T>* Arbol<T>::buscarPorIdRecursivo(int id, Nodo<T>* nodo){
 
 template<typename T>
 Nodo<T>* Arbol<T>::buscarPorContenido(T contenido){
-    return buscarPorContenidoRecursivo(raiz, contenido);
+    return buscarPorContenidoRecursivo(contenido, raiz);
 }
 template<typename T>
 Nodo<T>* Arbol<T>::buscarPorContenidoRecursivo(T contenido, Nodo<T>* nodo){

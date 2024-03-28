@@ -2,9 +2,9 @@
 #ifndef GRUPOS_H
 #define GRUPOS_H
 
-#include "Arbol.h"
+#include "../Arbol.h"
+//#include "../TiposCamposEnum.h"
 #include "Campos.h"
-#include "../TiposCamposEnum.h"
 using namespace std; 
 
 class Grupos{
@@ -89,16 +89,13 @@ void Grupos::reHash(){
 void Grupos::agregarGrupo(string instrGrupoAAgregar){
     // Eliminar |ADD NEW-GROUP | -> 14 caracteres
     instrGrupoAAgregar.erase(0, 14);
-
     // Obtener el nombre del grupo
     string grupo = "";
     for (int i = 0; instrGrupoAAgregar[i] != ' '; i++){
         grupo += instrGrupoAAgregar[i];
     }
-
     // Eliminar grupo + | FIELDS |  -> grupo.length +  8 
     instrGrupoAAgregar.erase(0, grupo.length() + 8);
-
     // Agregar el grupo
     agregarGrupo(grupo, instrGrupoAAgregar);
 }
@@ -109,8 +106,8 @@ void Grupos::agregarGrupo(string nombreGrupo, string campos){
     // Quitar ( y  );
     if (campos[0]                 == ' ' ){ campos.erase(0                 , 1 ); }
     if (campos[0]                 == '(' ){ campos.erase(0                 , 1 ); }
-    if (campos[campos.length()-1] == ';' ){ campos.erase(campos.length()-2 , 1 ); }
-    if (campos[campos.length()-1] == ')' ){ campos.erase(campos.length()-2 , 1 ); }
+    if (campos[campos.length()-1] == ';' ){ campos.erase(campos.length()-1 , 1 ); }
+    if (campos[campos.length()-1] == ')' ){ campos.erase(campos.length()-1 , 1 ); }
     // Agregar el grupo
     int posicionGrupo = hash(nombreGrupo);
     if(grupos[posicionGrupo] == nullptr){
@@ -118,7 +115,7 @@ void Grupos::agregarGrupo(string nombreGrupo, string campos){
         int cantidadTipos = contarTipos(campos);  
         grupos[posicionGrupo] = new Campos(cantidadTipos, nombreGrupo);
         uso++;
-        cout<<endl<<endl<<"Grupos.h: se ha creado un grupo nuevo usando agregarGrupo()."<<endl;
+        cout<<"Grupos.h: se ha creado un grupo nuevo usando agregarGrupo()."<<endl;
         cout<<"Nombre del grupo que agregado: "<<nombreGrupo<<endl;
         cout<<"Posicion en la tabla retornada por hash: "<<to_string(posicionGrupo)<<endl<<endl;
 
@@ -130,43 +127,51 @@ void Grupos::agregarGrupo(string nombreGrupo, string campos){
 
         // Separar los " " y operar
         string acumulador; 
-        string campo; 
-        string tipo; 
+        string campo = ""; 
+        string tipo = ""; 
         for (int i = 0; i < campos.length(); i++)
         {
-            if(campos[i] != ' '){
-                acumulador += campos[i];
-                if(acumulador.length() > 2){
-                    if(acumulador[acumulador.length()-1] == ','){
-                        acumulador.erase(acumulador.length()-2, 1);
+            while(campo == "" | tipo == ""){
+                if(i < campos.length() && campos[i] != ' '){
+                    acumulador += campos[i];
+                    if(acumulador.length() > 0){
+                        if(acumulador[acumulador.length()-1] == ','){
+                            acumulador.erase(acumulador.length()-1, 1);
+                        }
+                    }
+                }else{
+                    // Establecer par clave valor
+                    if(campo.empty()){
+                        campo = acumulador;
+                        acumulador = "";
+                    }else if(tipo.empty()){
+                        tipo = acumulador;
+                        acumulador = "";
                     }
                 }
-            }else{
-                // Establecer par clave valor
-                if(campo.empty()){
-                    campo = acumulador;
-                }else if(tipo.empty()){
-                    tipo = acumulador;
-                }
-
-                // Verificar que haya par clave valor para agregar el tipo 
-                if(campo.length() > 0 && tipo.length() > 0){
-
-                    if(tipo == "INTEGER"){
-                        grupos[posicionGrupo]->agregarCampo(campo, INTEGER);
-                    }else if(tipo == "STRING"){
-                        grupos[posicionGrupo]->agregarCampo(campo, STRING);
-                    }else if(tipo == "CHAR"){
-                        grupos[posicionGrupo]->agregarCampo(campo, CHAR);
-                    }else if(tipo == "DATE"){
-                        grupos[posicionGrupo]->agregarCampo(campo, DATE);
-                    }else{
-                        cout<<endl<<endl<<endl<<"Error en Grupos.h en funcion AgregarGrupo: " << endl; 
-                        cout<<"Se intento agregar un grupo pero no se reconocio el tipo deseado."<<endl;
-                        cout<<"Tipo que se quiso agregar: " <<tipo<<endl<<endl<<endl; 
-                    }
-                }
+                i++;
             }
+            
+            // Verificar que haya par clave valor para agregar el tipo 
+            if(campo.length() > 0 && tipo.length() > 0){
+                if(tipo == "INTEGER"){
+                    grupos[posicionGrupo]->agregarCampo(campo, 1);
+                }else if(tipo == "STRING"){
+                    grupos[posicionGrupo]->agregarCampo(campo, 2);
+                }else if(tipo == "CHAR"){
+                    grupos[posicionGrupo]->agregarCampo(campo, 3);
+                }else if(tipo == "DATE"){
+                    grupos[posicionGrupo]->agregarCampo(campo, 4);
+                }else{
+                    cout<<"Error en Grupos.h en funcion AgregarGrupo: " << endl; 
+                    cout<<"Se intento agregar un grupo pero no se reconocio el tipo deseado."<<endl;
+                    cout<<"Tipo que se quiso agregar: " <<tipo<<endl<<endl<<endl; 
+                }
+                campo = "";
+                tipo = "";
+                i--;
+            }
+            
         }
     }else{
         //Si la posicion ya esta ocupada, hubo una colision, informar del problema
@@ -178,21 +183,21 @@ void Grupos::agregarGrupo(string nombreGrupo, string campos){
 
 
 int Grupos::contarTipos(string cadena){
-    int cantidadTipos = 0; 
-    string acumulador; 
-    for (int i = 0; i < cadena.length()-1; i++)
-    {
-        acumulador += cadena[i];
-        if(acumulador == " "){
+    int cantidadTipos = 0;
+    string acumulador = "";
+    for (int i = 0; i < cadena.length(); i++){
+        if(cadena[i] != ' '){
+            acumulador += cadena[i];
+        }else{
             acumulador = "";
-        }else if(acumulador == "STRING" | acumulador == "INTEGER" | acumulador == "CHAR" | acumulador == "DATE"    ){
-            
-            cantidadTipos++;
-
         }
-    }
+        if(acumulador.compare("STRING") == 0 || acumulador.compare("INTEGER") == 0 || acumulador.compare("CHAR") == 0 || acumulador.compare("DATE") == 0){
+            cantidadTipos++;
+            acumulador = "";
+        }
 
-    return cantidadTipos; 
+    }
+    return cantidadTipos;
 }
 
 // Estructura de string esperada: ADD CONTACT IN amigos FIELDS (Pedro, Alvarez, 12345678, 02-05-1998);
