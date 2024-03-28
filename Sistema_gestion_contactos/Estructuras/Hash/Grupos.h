@@ -120,7 +120,7 @@ void Grupos::agregarGrupo(string nombreGrupo, string campos){
         uso++;
         cout<<"Grupos.h: se ha creado un grupo nuevo usando agregarGrupo()."<<endl;
         cout<<"Nombre del grupo que agregado: "<<nombreGrupo<<endl;
-        cout<<"Posicion en la tabla retornada por hash: "<<to_string(posicionGrupo)<<endl<<endl;
+        cout<<"Posicion en la tabla retornada por hash: "<<to_string(posicionGrupo)<<endl;
 
         if(uso > (tamanio*.6)){
             reHash();
@@ -168,7 +168,7 @@ void Grupos::agregarGrupo(string nombreGrupo, string campos){
                 }else{
                     cout<<"Error en Grupos.h en funcion AgregarGrupo: " << endl; 
                     cout<<"Se intento agregar un grupo pero no se reconocio el tipo deseado."<<endl;
-                    cout<<"Tipo que se quiso agregar: " <<tipo<<endl<<endl<<endl; 
+                    cout<<"Tipo que se quiso agregar: " <<tipo<<endl; 
                 }
                 campo = "";
                 tipo = "";
@@ -178,9 +178,9 @@ void Grupos::agregarGrupo(string nombreGrupo, string campos){
         }
     }else{
         //Si la posicion ya esta ocupada, hubo una colision, informar del problema
-        cout<<endl<<endl<<"Se quiso crear un grupo en Grupos.h - agregarGrupo() pero ocurrio una colision."<<endl;
+        cout<<"Se quiso crear un grupo en Grupos.h - agregarGrupo() pero ocurrio una colision."<<endl;
         cout<<"Nombre del grupo que se quiso agregar: "<<nombreGrupo<<endl;
-        cout<<"Posicion en la tabla retornada por hash: "<<to_string(posicionGrupo)<<endl<<endl;
+        cout<<"Posicion en la tabla retornada por hash: "<<to_string(posicionGrupo)<<endl;
     }    
 }
 

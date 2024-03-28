@@ -105,7 +105,7 @@ void Campos::agregarCampo(string nombreCampo, int tipo){
         cout<<"Posicion otorgada por funcion hash: "<<posicion<<endl; 
     }else{
         cout<<"Ocurrio una colision al intentar agregar un campo en Campos.h - agregarCampo."<<endl;
-        cout<<"Nombre del campo que se quiso agregar: " <<nombreCampo<<endl; 
+        cout<<"Nombre del campo que se quiso agregar: |" <<nombreCampo<<"|"<<endl; 
         cout<<"Posicion otorgada por funcion hash: "<<posicion<<endl; 
     }
 }
@@ -151,12 +151,12 @@ void Campos::insertar(string nombreCampo, string dato){
 
             
         uso++;
-        cout << endl << endl << "Hubo una insersion en la clase Campos (Campos.h)." << endl;
+        cout << endl << "Hubo una insersion en la clase Campos (Campos.h)." << endl;
         cout << "Nombre del campo insertado: " << nombreCampo << endl;
         cout << "Posicion en la tabla proporcionada por la funcion hash: " << std::to_string(posicion) << endl << endl << endl;
   
     }catch(const std::exception& e){
-        cout << endl << endl << "Error producido en la clase Campos (Campos.h) al insertar un dato." << endl;
+        cout << endl << "Error producido en la clase Campos (Campos.h) al insertar un dato." << endl;
         cout << "Nombre del campo donde se queria insertar: " << nombreCampo << endl;
         cout << "Posicion en la tabla proporcionada por la funcion hash: " << std::to_string(posicion) << endl;
         cout << "Dato que se intento insertar: " << dato << endl;
@@ -177,10 +177,9 @@ void Campos::insertarTuplaOrdenada(string valoresAInsertar){
     int contadorStringCampos = 0; 
     string valor, campo; 
 
-    cout<<"Lista orden campos: " << listaOrdenCampos << " | long: " << listaOrdenCampos.length()<<endl; 
+    cout<<"Lista orden campos: " << listaOrdenCampos << " | long: " << listaOrdenCampos.length()<<endl<<endl; 
 
     while(contadorStringValores < valoresAInsertar.length() && contadorStringCampos < listaOrdenCampos.length()){
-        cout<<"Dentro del wail c:"<<endl; 
         while(contadorStringValores <  valoresAInsertar.length() && valoresAInsertar[contadorStringValores] != ','  ){
             valor += valoresAInsertar[contadorStringValores];
             contadorStringValores++;
@@ -355,16 +354,16 @@ string Campos::obtenerPorId(int id, int posicionArbol){
 }
 
 string Campos::obtenerGrafo(){
-    string grafo = "digraph "+ grupo + "{\n}";
+    string grafo = "digraph "+ grupo + "{\n";
     for (int i = 0; i < tamanio; i++){
         if (arboles[i] != nullptr){
-            grafo += to_string(i) + "[label=\""+ arboles[i]->nombreCampo+ "\"];\n";
-            grafo += to_string(i+tamanio) + "[label=\""+ to_string(i) +"\"];\n";
-            grafo += to_string(i+tamanio) + " -> " +   to_string(i) + ";";
+            grafo += to_string(i+1000)         + "[label=\"" + arboles[i]->nombreCampo+ "\"];\n";
+            grafo += to_string(i+tamanio+1000) + "[label=\"" + to_string(i)           + "\"];\n";
+            grafo += to_string(i+tamanio+1000) +   " -> "    + to_string(i+1000)      + ";   \n";
         }else{
-            grafo += to_string(i) + "[label=\""+ to_string(i) +"\"];\n";
-            grafo += to_string(i+tamanio) + "[label=\"nullptr\"];\n";
-            grafo += to_string(i) + " -> "+  to_string(i+tamanio)+";\n";
+            grafo += to_string(i+1000)         + "[label=\"" + to_string(i)           + "\"];\n";
+            grafo += to_string(i+tamanio+1000) + "[label=\"nullptr\"];\n";
+            grafo += to_string(i+1000) + " -> "+  to_string(i+tamanio+1000)+";\n";
         }
     }
 

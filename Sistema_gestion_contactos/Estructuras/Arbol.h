@@ -320,7 +320,7 @@ string Arbol<T>::obtenerGrafoRecursivo(Nodo<T>* nodo){
     datoString = to_string(dato);
 
 
-    grafo += to_string(nodo->obtId())  + " [label=\"" + datoString  + "\"];\n";
+    grafo += to_string(nodo->obtId())  + " [label=\"" + datoString  + "("+to_string(nodo->obtId())+")\"];\n";
 
     if (nodo->obtIzquierdo() != nullptr) {
         grafo += to_string(nodo->obtId()) + " -> " + to_string(nodo->obtIzquierdo()->obtId())   + " [label=\"izquierdo\"];\n";
