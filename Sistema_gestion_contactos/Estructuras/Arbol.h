@@ -80,7 +80,7 @@ void Arbol<T>::insertar(T dato, int id){
         insertarRecursivo(raiz, dato, id);
     }
     cantidadNodos++;
-    balancear();
+    //balancear();
 }
 
 
@@ -118,11 +118,15 @@ Nodo<T>* Arbol<T>::buscarPorIdRecursivo(int id, Nodo<T>* nodo){
     if(nodo->obtId() == id){
         return nodo;
     }else{
+        Nodo<T>* temporal; 
         if(nodo->obtIzquierdo() != nullptr){
-            buscarPorIdRecursivo(id, nodo->obtIzquierdo());
+            temporal = buscarPorIdRecursivo(id, nodo->obtIzquierdo());
         }
         if(nodo->obtDerecho() != nullptr){
-            buscarPorIdRecursivo(id, nodo->obtDerecho());
+            temporal = buscarPorIdRecursivo(id, nodo->obtDerecho());
+        }
+        if(temporal != nullptr){
+            return temporal; 
         }
     }
     return nullptr;
@@ -142,11 +146,18 @@ Nodo<T>* Arbol<T>::buscarPorContenidoRecursivo(T contenido, Nodo<T>* nodo){
     if(nodo->obtDato() == contenido){
         return nodo;
     }else{
+        Nodo<T>* temporal;
         if(nodo->obtIzquierdo() != nullptr){
-            buscarPorContenidoRecursivo(contenido, nodo->obtIzquierdo());
+            temporal = buscarPorContenidoRecursivo(contenido, nodo->obtIzquierdo());
+            if(temporal!= nullptr){
+                return temporal;
+            }
         }
         if(nodo->obtDerecho() != nullptr){
-            buscarPorContenidoRecursivo(contenido,nodo->obtDerecho());
+            temporal = buscarPorContenidoRecursivo(contenido,nodo->obtDerecho());
+            if(temporal!= nullptr){
+                return temporal;
+            }
         }
     }
     return nullptr;
@@ -298,11 +309,11 @@ void Arbol<T>::generarGraficoRecursivo(Nodo<T>* nodo, std::ofstream& archivo) {
 
 template<typename T>
 string Arbol<T>::obtenerGrafo(){
-    string grafo = "subgraph " + nombreCampo +"{\n";
-    grafo+= "label=" + nombreCampo +"\n";
+    string grafo = "     subgraph " + nombreCampo +"{\n";
+    grafo+= "     label=" + nombreCampo +"\n";
     grafo += obtenerGrafoRecursivo(raiz);
 
-    grafo += "}\n";
+    grafo += "     }\n";
     cout<<"Digraph de "<< nombreCampo<< " generado correctamente."<<endl;
     return grafo; 
 }
@@ -320,15 +331,15 @@ string Arbol<T>::obtenerGrafoRecursivo(Nodo<T>* nodo){
     datoString = to_string(dato);
 
 
-    grafo += to_string(nodo->obtId())  + " [label=\"" + datoString  + "("+to_string(nodo->obtId())+")\"];\n";
+    grafo += "          "+ to_string(dato)  + " [label=\"" + datoString  + " |"+to_string(nodo->obtId())+"| \"];\n";
 
     if (nodo->obtIzquierdo() != nullptr) {
-        grafo += to_string(nodo->obtId()) + " -> " + to_string(nodo->obtIzquierdo()->obtId())   + " [label=\"izquierdo\"];\n";
+        grafo += "          " + to_string(nodo->obtDato()) + " -> " + to_string(nodo->obtIzquierdo()->obtDato())   + " [label=\"izquierdo\"];\n";
         grafo += obtenerGrafoRecursivo(nodo->obtIzquierdo());
     }
 
     if (nodo->obtDerecho() != nullptr) {
-        grafo += to_string(nodo->obtId())   +   " -> " + to_string(nodo->obtDerecho()->obtId())  + " [label=\"derecho\"];\n";
+        grafo += "          " + to_string(nodo->obtDato())   +   " -> " + to_string(nodo->obtDerecho()->obtDato())  + " [label=\"derecho\"];\n";
         grafo += obtenerGrafoRecursivo(nodo->obtDerecho());
     }
     return grafo; 

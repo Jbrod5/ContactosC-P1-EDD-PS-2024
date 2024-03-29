@@ -149,8 +149,6 @@ void Campos::insertar(string nombreCampo, string dato){
 
         }
 
-            
-        uso++;
         cout << endl << "Hubo una insersion en la clase Campos (Campos.h)." << endl;
         cout << "Nombre del campo insertado: " << nombreCampo << endl;
         cout << "Posicion en la tabla proporcionada por la funcion hash: " << std::to_string(posicion) << endl << endl << endl;
@@ -166,6 +164,7 @@ void Campos::insertar(string nombreCampo, string dato){
 
 //Estructura de string esperada: (Pedro, Alvarez, 12345678, 02-05-1998);
 void Campos::insertarTuplaOrdenada(string valoresAInsertar){
+    uso++;
     // Recorremos el string 
     if (valoresAInsertar[0]                 == ' ' ){ valoresAInsertar.erase(0                 , 1 ); }    
     if (valoresAInsertar[0]                 == '(' ){ valoresAInsertar.erase(0                 , 1 ); }
@@ -199,7 +198,7 @@ void Campos::insertarTuplaOrdenada(string valoresAInsertar){
         cout<<"Campos.h: insertarTuplaOrdenada()"<<endl;
         cout<<"Campo donde insertar: "<<campo<<endl;
         cout<<"Valor a insertar: "<<valor<<endl;  
-
+        cout<<"Uso actual: " <<uso<<endl; 
         insertar(campo, valor);
         
         //Limpiar los acumuladores
@@ -223,7 +222,8 @@ string Campos::obtenerPorContenido(string nombreCampo, string dato){
     string resultado; 
 
     ArbolBase* dondeBuscarPorDato = arboles[posicionArbol];
-    
+    std::cout<<"El nombre del campo a buscar es: |" <<nombreCampo<<"|"<<std::endl;     
+    std::cout<<"El nombre del dato a buscar es: |" <<dato<<"|"<<std::endl;     
 
     //2. Obtener el nodo con la informacion que buscamos y agregarla al resultado, ademas de obtener el id para buscar en los demas arboles
     if(dondeBuscarPorDato != nullptr){

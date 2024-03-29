@@ -3,6 +3,7 @@
 #define GRUPOS_H
 
 #include "../Arbol.h"
+//#include "../Logger.h"
 #include <fstream>
 #include <iostream>
 //#include "../TiposCamposEnum.h"
@@ -15,6 +16,7 @@ class Grupos{
         int uso;     //cantidad de elementos insertados
         int tamanio; //tamanio del array
         Campos** grupos;  
+        //Logger logger; 
         
         int hash(string nombreGrupo); 
          
@@ -78,10 +80,12 @@ void Grupos::reHash(){
             nuevaPosicion = hash(nombreGrupoActual);
             if(gruposTemporal[nuevaPosicion] == nullptr){
                 gruposTemporal[nuevaPosicion] = grupoActual;
+                //logger.log(nombreGrupoActual+" fue movido de la posicion " +  to_string(i) + " a la posicion" + to_string(nuevaPosicion) + " por la funcion reHash en Grupos.h.");
                 cout<<nombreGrupoActual<<" fue movido de la posicion "<< to_string(i) <<" a la posicion"<<to_string(nuevaPosicion)<< " por la funcion reHash en Grupos.h."<<endl; 
             }else{
-                std::cout << endl << endl << endl << "Hubo una colision en Grupos.h: en la funcion reHash." << endl; 
-                std::cout << "Se intento asignar el grupo: " << nombreGrupoActual << " en la posicion: " << to_string(nuevaPosicion) << " otorgada por la funcion hash, pero " <<  gruposTemporal[nuevaPosicion]->obtenerGrupo() << " ya se encontraba en esa posicion." << endl << endl<< endl<< endl;
+                //logger.log("Hubo una colision en Grupos.h: en la funcion reHash.\nSe intento asignar el grupo: "+ nombreGrupoActual + " en la posicion: " + to_string(nuevaPosicion) + " otorgada por la funcion hash, pero " +  gruposTemporal[nuevaPosicion]->obtenerGrupo() + " ya se encontraba en esa posicion.");
+                //std::cout << endl << endl << endl << "Hubo una colision en Grupos.h: en la funcion reHash." << endl; 
+                //std::cout << "Se intento asignar el grupo: " << nombreGrupoActual << " en la posicion: " << to_string(nuevaPosicion) << " otorgada por la funcion hash, pero " <<  gruposTemporal[nuevaPosicion]->obtenerGrupo() << " ya se encontraba en esa posicion." << endl << endl<< endl<< endl;
             }
         }
     }
@@ -118,6 +122,7 @@ void Grupos::agregarGrupo(string nombreGrupo, string campos){
         int cantidadTipos = contarTipos(campos);  
         grupos[posicionGrupo] = new Campos(cantidadTipos, nombreGrupo);
         uso++;
+        //logger.log("Grupos.h: se ha creado un grupo nuevo usando agregarGrupo().\nNombre del grupo que agregado: "+nombreGrupo+"\nPosicion en la tabla retornada por hash: "+to_string(posicionGrupo));
         cout<<"Grupos.h: se ha creado un grupo nuevo usando agregarGrupo()."<<endl;
         cout<<"Nombre del grupo que agregado: "<<nombreGrupo<<endl;
         cout<<"Posicion en la tabla retornada por hash: "<<to_string(posicionGrupo)<<endl;
@@ -125,6 +130,7 @@ void Grupos::agregarGrupo(string nombreGrupo, string campos){
         if(uso > (tamanio*.6)){
             reHash();
             cout<<endl<<endl<<"Grupos.h: se ha superado el 60 por ciento de uso por lo que se realizo el rehash."<<endl<<endl;
+            //logger.log("Grupos.h: se ha superado el 60 por ciento de uso por lo que se realizo el rehash.");
         }
 
 
@@ -166,6 +172,7 @@ void Grupos::agregarGrupo(string nombreGrupo, string campos){
                 }else if(tipo == "DATE"){
                     grupos[posicionGrupo]->agregarCampo(campo, 4);
                 }else{
+                    //logger.log("Error en Grupos.h en funcion AgregarGrupo. \nSe intento agregar un grupo pero no se reconocio el tipo deseado. \nTipo que se quiso agregar: " + tipo);
                     cout<<"Error en Grupos.h en funcion AgregarGrupo: " << endl; 
                     cout<<"Se intento agregar un grupo pero no se reconocio el tipo deseado."<<endl;
                     cout<<"Tipo que se quiso agregar: " <<tipo<<endl; 
@@ -178,6 +185,7 @@ void Grupos::agregarGrupo(string nombreGrupo, string campos){
         }
     }else{
         //Si la posicion ya esta ocupada, hubo una colision, informar del problema
+        //logger.log("Se quiso crear un grupo en Grupos.h - agregarGrupo() pero ocurrio una colision.\nNombre del grupo que se quiso agregar: "+nombreGrupo+"Posicion en la tabla retornada por hash: "+to_string(posicionGrupo));
         cout<<"Se quiso crear un grupo en Grupos.h - agregarGrupo() pero ocurrio una colision."<<endl;
         cout<<"Nombre del grupo que se quiso agregar: "<<nombreGrupo<<endl;
         cout<<"Posicion en la tabla retornada por hash: "<<to_string(posicionGrupo)<<endl;
@@ -214,11 +222,13 @@ void Grupos::agregarContacto(string instrContactoAAgregar){
     for (contadorString = 0; contadorString < instrContactoAAgregar.length() && instrContactoAAgregar[contadorString] != ' '; contadorString++){
         grupo += instrContactoAAgregar[contadorString];
     }
-    cout<<"Grupos.h: Grupo donde agregar: " <<grupo<<endl;
 
     // Eliminar |grupo FIELDS | de la cadena -> grupo.length + 8
     contadorString = grupo.length() + 8;
     instrContactoAAgregar.erase(0, contadorString);
+    
+    //logger.log("Grupos.h: Grupo donde agregar: "+ grupo+"\nInstruccion por procesar: " + instrContactoAAgregar);
+    cout<<"Grupos.h: Grupo donde agregar: " <<grupo<<endl;
     cout<<"Instruccion por procesar: "<<instrContactoAAgregar<<endl;
     // Insertar tupla en el grupo
     grupos[hash(grupo)]->insertarTuplaOrdenada(instrContactoAAgregar);
@@ -252,7 +262,7 @@ string Grupos::obtenerContacto(string instrContactoABuscar){
     //Eliminar ; al final
     string valor = instrContactoABuscar; 
     if(instrContactoABuscar[instrContactoABuscar.length()-1] == ';'){    
-        instrContactoABuscar.erase(instrContactoABuscar.length()-2, 1); 
+        instrContactoABuscar.erase(instrContactoABuscar.length()-1, 1); 
         valor = instrContactoABuscar;
     }
 
@@ -278,13 +288,16 @@ void Grupos::generarGrafoGrupo(string instrGenerarGrafoGrupo){
     if(grupo != nullptr){
         // Generar el grafo
         string grafo = grupo->obtenerGrafo();
-        ofstream archivo(instrGenerarGrafoGrupo+".dot");
+        ofstream archivo("./Grafos/"+instrGenerarGrafoGrupo+".dot");
         archivo<<grafo;
         archivo.close();
-        string comando = "dot -Tpng " + instrGenerarGrafoGrupo + ".dot -o " + instrGenerarGrafoGrupo + ".png";
+        string comando = "dot -Tpng ./Grafos/" + instrGenerarGrafoGrupo + ".dot -o ./Grafos/" + instrGenerarGrafoGrupo + ".png";
         system(comando.c_str());
+        //logger.log("Grupos.h: Grafo "+instrGenerarGrafoGrupo+" generado correctamente!");
         cout<<"Grupos.h: Grafo "+instrGenerarGrafoGrupo+" generado correctamente!"<<endl;
+
     }else{
+        //logger.log("Grupos.h: generarGrafoGrupo. Hubo un error al generar el grafo del grupo: " + instrGenerarGrafoGrupo + "\nEl grupo obtenido por la funcion hash (posicion " + to_string(hash(instrGenerarGrafoGrupo)) +" ) es nulo.");
         cout<<"Grupos.h: generarGrafoGrupo. Hubo un error al generar el grafo del grupo: "<<instrGenerarGrafoGrupo<<endl;
         cout<<"El grupo obtenido por la funcion hash (posicion "<< hash(instrGenerarGrafoGrupo)<<" ) es nulo."<<endl; 
     }

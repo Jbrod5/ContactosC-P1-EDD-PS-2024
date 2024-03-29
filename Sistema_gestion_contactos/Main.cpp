@@ -4,6 +4,7 @@
 #include "./Estructuras/Nodo.h"
 #include "./Estructuras/Arbol.h"
 #include "./Estructuras/Hash/Grupos.h"
+//#include "./Estructuras/Logger.h"
 
 
 using namespace std; 
@@ -15,6 +16,7 @@ int main() {
     int comandoLong = 0; 
     string comandoSubstr;
     bool leerCLI = true; 
+    //Logger logger;
 
     ifstream* archivo;
 
@@ -30,6 +32,7 @@ int main() {
 
             if (archivo != nullptr  && archivo->is_open()) {
                 getline(*archivo, comando);
+                //logger.log("Comando reconocido desde archivo: |"+comando+"|");
                 cout<<"Comando reconocido desde archivo: |"<<comando<<"|"<<endl;
                 if(comando.empty()){
                     archivo->close();
@@ -55,12 +58,13 @@ int main() {
 
 
         comandoLong = comando.length();
-        if(comando[comandoLong-1] == '\n'){
-            comando.erase( comandoLong-2, 1);
+        if( comandoLong > 1 && comando[comandoLong-1] == '\n'){
+            comando.erase( comandoLong-1, 1);
         }
 
         // 1. EXIT;
         if(comando == "EXIT;"){
+            //logger.log("Saliendo de Gestion de contactos CLI.");
             cout << "Saliendo de Gestion de contactos CLI."<<endl; 
             break;
 
@@ -69,6 +73,7 @@ int main() {
         // 2. ADD NEW-GROUP -> 13 caracteres 
         if(comandoLong > 13){
             if(comando.substr(0,13) == "ADD NEW-GROUP"){
+                //logger.log("Agregar grupo reconocido.");
                 cout<<"Agregar grupo reconocido."<<endl;
                 grupos->agregarGrupo(comando);
 
@@ -77,6 +82,7 @@ int main() {
         // 3. ADD CONTACT IN -> 14 caracteres
         }if(comandoLong > 14){
             if(comando.substr(0,14) == "ADD CONTACT IN"){
+                //logger.log("Agregar contactos reconocido.");
                 cout<<"Agregar contactos reconocido."<<endl;
                 grupos->agregarContacto(comando);
             }
@@ -85,13 +91,16 @@ int main() {
         // 4. FIND CONTACT IN ->
         }if(comandoLong > 15){
             if(comando.substr(0,15) == "FIND CONTACT IN"){
+                //logger.log("Buscar contacto reconocido.");
                 cout<<"Buscar contacto reconocido."<<endl;
-                grupos->obtenerContacto(comando);
+                //logger.log("Resultado: "+ grupos->obtenerContacto(comando));
+                cout<<"Resultado: "<< grupos->obtenerContacto(comando)<<endl;
             }
 
         }//5. GENERATE GRAPH GROUP grupo; -> 20 caracteres
         if(comandoLong > 19){
             if(comando.substr(0,20) == "GENERATE GRAPH GROUP"){
+                //logger.log("Generar grafo de grupo reconocido.");
                 cout<<"Generar grafo de grupo reconocido."<<endl; 
                 grupos->generarGrafoGrupo(comando);
             }
@@ -99,6 +108,7 @@ int main() {
         //6. |IMPORT FROM SCRIPT | - 19 caracteres; 
         if(comandoLong > 19){
             if(comando.substr(0,18) == "IMPORT FROM SCRIPT"){
+                //logger.log("Importar desde script reconocido.");
                 cout<<"Importar desde script reconocido."<<endl; 
                 //Borrar IMPORT FROM SCRIPT 
                 comando.erase(0,19);
