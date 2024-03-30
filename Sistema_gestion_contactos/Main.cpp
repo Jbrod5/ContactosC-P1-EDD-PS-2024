@@ -130,6 +130,18 @@ int main() {
             grupos->generarGrafoContactos();
         }
 
+        //8. |EXPORT GROUP | -> 13 caracteres
+        if(comandoLong > 13){
+            if(comando.substr(0,13) == "EXPORT GROUP "){
+                logger.log("Exportar grupo detectado");
+                comando.erase(0,13); 
+                if(comando[comando.length()-1] == ';'){
+                    comando.erase(comando.length()-1, 1);
+                    grupos->exportarGrupo(comando);
+                }
+            }
+        }
+
 
         comando = "";
 

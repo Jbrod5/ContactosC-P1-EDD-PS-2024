@@ -32,6 +32,7 @@ class Grupos{
 
         string obtenerContacto(string instrContactoABuscar);
         void generarGrafoGrupo(string instrGenerarGrafoGrupo); //Genera un grafo de un grupo con graphviz, cadena esperada: GENERATE GRPH GROUP grupo;
+        void exportarGrupo(string instrExportarGrupo);
         //string obtenerContacto(string nombreGrupo, string campoABuscar, string valorABuscar); //Retorna la tupla de un contacto en base a un nombre de grupo(para hacer hash y obtener la posicion en el array), y usa internamente la funcion obtenerTupla
         //string obtenerTupla(string campo, string valorABuscar); //Retorna la tupla de un contacto en base a un campo y un valor, asi: [campo]=[DatoQueBusca]
 
@@ -316,6 +317,31 @@ void Grupos::generarGrafoGrupo(string instrGenerarGrafoGrupo){
         //cout<<"El grupo obtenido por la funcion hash (posicion "<< hash(instrGenerarGrafoGrupo)<<" ) es nulo."<<endl; 
     }
 }
+
+
+
+
+void Grupos::exportarGrupo(string nombreGrupo){
+    //El comando ya esta limpio. Lo que queda es el grupo
+
+    Campos* grupo = grupos[hash(nombreGrupo)];
+
+    //Exportar
+
+    if(grupo != nullptr){
+        // Exportar
+        grupo->exportarGrupo();
+       
+    }else{
+        logger.log("Grupos.h: exportarGrupo(). Hubo un error alexportar el grupo: " + nombreGrupo + "\nEl grupo obtenido por la funcion hash (posicion " + to_string(hash(nombreGrupo)) +" ) es nulo.");
+        
+    }
+}
+
+
+
+
+
 
 void Grupos::generarGrafoContactos(){
     Campos* grupo; 

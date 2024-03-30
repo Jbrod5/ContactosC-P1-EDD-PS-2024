@@ -42,6 +42,7 @@ class Campos{
 
         string obtenerGrupo();
         string obtenerGrafo();
+        void exportarGrupo();
         
 };
 
@@ -383,6 +384,49 @@ string Campos::obtenerPorId(int id, int posicionArbol){
     }
     resultado += "\n";
     return resultado; 
+}
+
+void Campos::exportarGrupo(){
+    logger.crearCarpeta(grupo);
+    string listaValores = ""; 
+    ArbolBase* verificacion; 
+    bool encontrado = false; 
+    string acumulador; 
+
+    for (int i = 0; i < tamanio; i++)
+    {
+        verificacion = arboles[i];
+        if((typeid(*verificacion) == typeid(ArbolChar) ||  typeid(*verificacion) == typeid(ArbolInt) || typeid(*verificacion) == typeid(ArbolString) )){
+            encontrado = true; 
+            break;
+        }
+
+    }
+
+    if(true){
+        listaValores = verificacion->obtenerListaElementos();
+
+        //Los elementos estan separados por comas
+        for (int i = 0; i < listaValores.length(); i++){
+            if(listaValores[i] != ','){
+                acumulador+=listaValores[i];
+            }else{
+                logger.persistir("./"+grupo+"/"+acumulador, obtenerPorContenido(verificacion->nombreCampo,acumulador));
+                acumulador = "";
+            }
+        }
+        
+        logger.log("Se ha exportado el grupo " + grupo + " en " + "./"+grupo+"/\nLos criterios de busqueda para la exportacion fueron:\n"
+                    +"Valores buscados: "+listaValores+"\n"
+                    +"Campo buscado: "+verificacion->nombreCampo+"\n"
+                    +"Grupo: " + grupo );
+
+
+    }else{
+        logger.log("Error en Campos.h - exportarGrupo(). \nNo se encontro un arbol valido sobre el cual buscar.");
+    }
+    
+
 }
 
 string Campos::obtenerGrafo(){

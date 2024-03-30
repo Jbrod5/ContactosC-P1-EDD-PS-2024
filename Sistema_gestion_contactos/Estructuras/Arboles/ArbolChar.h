@@ -22,6 +22,9 @@
             void balancear();
             void generarGrafico();
             string obtenerGrafo() override;
+            string obtenerListaElementos() override{
+                return arbol->obtenerListaElementos();
+            }
             ~ArbolChar() override {
             // Código del destructor de la clase ArbolChar
             }

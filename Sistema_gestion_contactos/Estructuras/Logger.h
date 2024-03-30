@@ -20,6 +20,25 @@ public:
             file.close();
         }
     }
+
+    void crearCarpeta(string nombre){
+        string SH_CMD = "mkdir " + nombre;
+        string POWERSHELL = "New-Item -ItemType Directory -Name " + nombre;
+        //Ejecutar las instrucciones 
+        system(SH_CMD.c_str());
+        system(POWERSHELL.c_str());
+    }
+
+    void persistir(const std::string& nombreArchivo, const std::string& contenido) {
+        std::ofstream archivo(nombreArchivo + ".ct");
+        if (archivo.is_open()) {
+            archivo << contenido;
+            archivo.close();
+            std::cout << "Archivo creado y contenido guardado exitosamente." << std::endl;
+        } else {
+            std::cout << "No se pudo abrir el archivo." << std::endl;
+    }
+}
 };
 
 #endif

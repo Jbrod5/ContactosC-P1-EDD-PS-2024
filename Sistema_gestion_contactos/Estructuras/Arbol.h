@@ -39,6 +39,7 @@ class Arbol{
         string nombreCampo;
 
         string obtenerGrafoRecursivo(Nodo<T>* nodo);
+        string obtenerListaElementosRecursivo(Nodo<T>* nodo);
     public:
         Arbol(string nombre);
         bool estaVacio();
@@ -53,6 +54,8 @@ class Arbol{
 
        string obtenerGrafo();
        string obtenerNombreCampo();
+
+       string obtenerListaElementos();
 
        string to_string(Date* date);
        string to_string(int dato);
@@ -164,11 +167,6 @@ Nodo<T>* Arbol<T>::buscarPorContenidoRecursivo(T contenido, Nodo<T>* nodo){
     }
     return nullptr;
 }
-
-
-
-
-
 
 
 
@@ -306,6 +304,40 @@ void Arbol<T>::generarGraficoRecursivo(Nodo<T>* nodo, std::ofstream& archivo) {
         archivo << nodo->obtId() << " -> " << nodo->obtDerecho()->obtId() << " [label=\"derecho\"];\n";
         generarGraficoRecursivo(nodo->obtDerecho(), archivo);
     }
+}
+
+
+template<typename T>
+string Arbol<T>::obtenerListaElementos(){
+    string elementos=""; 
+    elementos += obtenerListaElementosRecursivo(raiz);
+    return elementos;
+}
+
+
+template<typename T>
+string Arbol<T>::obtenerListaElementosRecursivo(Nodo<T>* nodo){
+    string elementos = "";
+
+    if (nodo == nullptr) {
+        return elementos;
+    }
+
+    T dato = nodo->obtDato();
+    string datoString;
+    datoString = to_string(dato);
+
+
+    elementos += datoString + ",";
+
+    if (nodo->obtIzquierdo() != nullptr) {
+        elementos += obtenerListaElementosRecursivo(nodo->obtIzquierdo());
+    }
+
+    if (nodo->obtDerecho() != nullptr) {
+        elementos += obtenerListaElementosRecursivo(nodo->obtDerecho());
+    }
+    return elementos; 
 }
 
 

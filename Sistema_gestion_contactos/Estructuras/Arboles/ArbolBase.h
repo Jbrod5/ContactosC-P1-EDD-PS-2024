@@ -24,6 +24,9 @@
             virtual void balancear();
             virtual void generarGrafico();
             virtual string obtenerGrafo();
+            virtual string obtenerListaElementos(){
+                return "";
+            };
             
     };
 
