@@ -13,6 +13,7 @@
 #include "../Arboles/ArbolChar.h"
 #include "../Arboles/ArbolInt.h"
 #include "../Arboles/ArbolString.h"
+#include "../Logger.h"
 
 using namespace std; 
 
@@ -28,6 +29,7 @@ class Campos{
         
         int hash(string nombreCampo);
         string obtenerPorId(int id, int posicionArbol);
+        Logger logger; 
 
     public: 
         void agregarCampo(string nombreCampo, int tipo); // el nombre es el hash, el tipo es un enum: STRING, INT, DATE, ETC (enum)
@@ -88,9 +90,7 @@ void Campos::agregarCampo(string nombreCampo, int tipo){
     // 1. Verificar que no haya colision:
     ArbolBase* verificacion = arboles[posicion];
     if(verificacion != nullptr && !(typeid(*verificacion) == typeid(ArbolChar) ||  typeid(*verificacion) == typeid(ArbolInt) || typeid(*verificacion) == typeid(ArbolString) || typeid(*verificacion) == typeid(ArbolDate))){
-        cout<<"Antes de asignar nlptr"<<endl; 
         verificacion = nullptr;
-        cout<<"Campos.h: agregarCampo: Verificacion estaba iniciado pero no era un arbol donde guardar."<<endl;
     }
 
     if(verificacion == nullptr){
@@ -112,15 +112,21 @@ void Campos::agregarCampo(string nombreCampo, int tipo){
         }
         
         listaOrdenCampos+= nombreCampo+",";
-        cout<<"Se ha agregado un campo nuevo en Campos.h - agregarCampo."<<endl;
-        cout<<"Nombre del campo agregado: " <<nombreCampo<<endl; 
-        cout<<"Posicion otorgada por funcion hash: "<<posicion<<endl; 
+        logger.log("Se ha agregado un campo nuevo en Campos.h - agregarCampo.\nNombre del campo agregado: " +nombreCampo+"\n"+
+                  "Posicion otorgada por funcion hash: " + to_string(posicion));
+        
+        //cout<<"Se ha agregado un campo nuevo en Campos.h - agregarCampo."<<endl;
+        //cout<<"Nombre del campo agregado: " <<nombreCampo<<endl; 
+        //cout<<"Posicion otorgada por funcion hash: "<<posicion<<endl; 
     }else{
-        cout<<"Ocurrio una colision al intentar agregar un campo en Campos.h - agregarCampo."<<endl;
-        cout<<"Nombre del campo que se quiso agregar: |" <<nombreCampo<<"|"<<endl; 
-        cout<<"Posicion otorgada por funcion hash: "<<posicion<<endl;
-        cout<<"Nulo? : " << (arboles[posicion] == nullptr);
-        cout<<"Arbol ocupando la posicion: "<< arboles[posicion]->nombreCampo; 
+        logger.log("Ocurrio una colision al intentar agregar un campo en Campos.h - agregarCampo.\nNombre del campo que se quiso agregar: |" +nombreCampo+"|\n"
+                  +"Posicion otorgada por funcion hash: " + to_string (posicion)+"\n"+
+                  "Arbol ocupando la posicion: "+arboles[posicion]->nombreCampo);
+        //cout<<"Ocurrio una colision al intentar agregar un campo en Campos.h - agregarCampo."<<endl;
+        //cout<<"Nombre del campo que se quiso agregar: |" <<nombreCampo<<"|"<<endl; 
+        //cout<<"Posicion otorgada por funcion hash: "<<posicion<<endl;
+        //cout<<"Nulo? : " << (arboles[posicion] == nullptr);
+        //cout<<"Arbol ocupando la posicion: "<< arboles[posicion]->nombreCampo; 
     }
 }
 
@@ -131,10 +137,12 @@ void Campos::insertar(string nombreCampo, string dato){
     string tipo = "a"; 
 
     if(dondeInsertar == nullptr){
-        cout << "Error producido en la clase Campos (Campos.h) al insertar un dato." << endl;
-        cout << "Se quiso insertar un dato en un arbol nulo."<< endl ;
-        cout << "Nombre del campo donde se queria insertar: " << nombreCampo << endl;
-        cout << "Posicion en la tabla proporcionada por la funcion hash: " << std::to_string(posicion) << endl << endl << endl;
+        logger.log("Error producido en la clase Campos (Campos.h) al insertar un dato.\nSe quiso insertar un dato en un arbol nulo.\nNombre del campo donde se queria insertar: " + nombreCampo +"\n" +
+                    "Posicion en la tabla proporcionada por la funcion hash: " + std::to_string(posicion));
+        //cout << "Error producido en la clase Campos (Campos.h) al insertar un dato." << endl;
+        //cout << "Se quiso insertar un dato en un arbol nulo."<< endl ;
+        //cout << "Nombre del campo donde se queria insertar: " << nombreCampo << endl;
+        //cout << "Posicion en la tabla proporcionada por la funcion hash: " << std::to_string(posicion) << endl << endl << endl;
         return; 
     }
 
@@ -163,16 +171,22 @@ void Campos::insertar(string nombreCampo, string dato){
 
         }
 
-        cout << endl << "Hubo una insersion en la clase Campos (Campos.h)." << endl;
-        cout << "Nombre del campo insertado: " << nombreCampo << endl;
-        cout << "Posicion en la tabla proporcionada por la funcion hash: " << std::to_string(posicion) << endl << endl << endl;
+        logger.log("Hubo una insersion en la clase Campos (Campos.h).\nNombre del campo insertado: " + nombreCampo
+                    +"\nPosicion en la tabla proporcionada por la funcion hash: " + std::to_string(posicion));
+        //cout << endl << "Hubo una insersion en la clase Campos (Campos.h)." << endl;
+        //cout << "Nombre del campo insertado: " << nombreCampo << endl;
+        //cout << "Posicion en la tabla proporcionada por la funcion hash: " << std::to_string(posicion) << endl << endl << endl;
   
     }catch(const std::exception& e){
-        cout << endl << "Error producido en la clase Campos (Campos.h) al insertar un dato." << endl;
-        cout << "Nombre del campo donde se queria insertar: " << nombreCampo << endl;
-        cout << "Posicion en la tabla proporcionada por la funcion hash: " << std::to_string(posicion) << endl;
-        cout << "Dato que se intento insertar: " << dato << endl;
-        cout << "Tipo de arbol donde se queria insertar: " << tipo << endl << endl<< endl<< endl<< endl;
+        logger.log("Error producido en la clase Campos (Campos.h) al insertar un dato.\nNombre del campo donde se queria insertar: " + nombreCampo+
+                   "\nPosicion en la tabla proporcionada por la funcion hash: " + std::to_string(posicion)+
+                   "\nDato que se intento insertar: " + dato+
+                   "\nTipo de arbol donde se queria insertar: " + tipo);
+        //cout << endl << "Error producido en la clase Campos (Campos.h) al insertar un dato." << endl;
+        //cout << "Nombre del campo donde se queria insertar: " << nombreCampo << endl;
+        //cout << "Posicion en la tabla proporcionada por la funcion hash: " << std::to_string(posicion) << endl;
+        //cout << "Dato que se intento insertar: " << dato << endl;
+        //cout << "Tipo de arbol donde se queria insertar: " << tipo << endl << endl<< endl<< endl<< endl;
     }
 }
 
@@ -209,10 +223,13 @@ void Campos::insertarTuplaOrdenada(string valoresAInsertar){
         }
 
         // Llamar internamente a insertar
-        cout<<"Campos.h: insertarTuplaOrdenada()"<<endl;
-        cout<<"Campo donde insertar: "<<campo<<endl;
-        cout<<"Valor a insertar: "<<valor<<endl;  
-        cout<<"Uso actual: " <<uso<<endl; 
+        logger.log("Campos.h: insertarTuplaOrdenada()\nCampo donde insertar: "+campo+
+                   "\nValor a insertar: "+valor + 
+                   "\nUso actual: " + to_string(uso));
+        //cout<<"Campos.h: insertarTuplaOrdenada()"<<endl;
+        //cout<<"Campo donde insertar: "<<campo<<endl;
+        //cout<<"Valor a insertar: "<<valor<<endl;  
+        //cout<<"Uso actual: " <<uso<<endl; 
         insertar(campo, valor);
         
         //Limpiar los acumuladores
@@ -236,8 +253,9 @@ string Campos::obtenerPorContenido(string nombreCampo, string dato){
     string resultado; 
 
     ArbolBase* dondeBuscarPorDato = arboles[posicionArbol];
-    std::cout<<"El nombre del campo a buscar es: |" <<nombreCampo<<"|"<<std::endl;     
-    std::cout<<"El nombre del dato a buscar es: |" <<dato<<"|"<<std::endl;     
+    logger.log("El nombre del campo a buscar es: |" + nombreCampo+"|\nEl nombre del dato a buscar es: |" + dato + "|" );
+    //std::cout<<"El nombre del campo a buscar es: |" <<nombreCampo<<"|"<<std::endl;     
+    //std::cout<<"El nombre del dato a buscar es: |" <<dato<<"|"<<std::endl;     
 
     //2. Obtener el nodo con la informacion que buscamos y agregarla al resultado, ademas de obtener el id para buscar en los demas arboles
     if(dondeBuscarPorDato != nullptr){
@@ -251,7 +269,7 @@ string Campos::obtenerPorContenido(string nombreCampo, string dato){
                 id = encontrado->obtId();
                 resultado += dondeBuscarPorDato->nombreCampo + ": " + encontrado->obtDato();
             } else{
-                resultado = "Hubo un error en Campos.h al buscar " + dato + " en " + nombreCampo + " ya que no se encontro un nodo con el dato solicitado. Tipo de arbol: " + tipo;
+                resultado = "Hubo un error en Campos.h al buscar " + dato + " en " + nombreCampo + " ya que no se encontro un nodo con el dato solicitado. \nTipo de arbol: " + tipo;
             }
 
 
@@ -265,7 +283,7 @@ string Campos::obtenerPorContenido(string nombreCampo, string dato){
                 Date* fecha = encontrado->obtDato();
                 resultado += dondeBuscarPorDato->nombreCampo + ": " + fecha->obtFecha();
             } else{
-                resultado = "Hubo un error en Campos.h al buscar " + dato + " en " + nombreCampo + " ya que no se encontro un nodo con el dato solicitado. Tipo de arbol: " + tipo;
+                resultado = "Hubo un error en Campos.h al buscar " + dato + " en " + nombreCampo + " ya que no se encontro un nodo con el dato solicitado. \nTipo de arbol: " + tipo;
             }
 
 
@@ -277,7 +295,7 @@ string Campos::obtenerPorContenido(string nombreCampo, string dato){
                 id = encontrado->obtId();
                 resultado += dondeBuscarPorDato->nombreCampo + ": " + encontrado->obtDato();
             } else{
-                resultado = "Hubo un error en Campos.h al buscar " + dato + " en " + nombreCampo + " ya que no se encontro un nodo con el dato solicitado. Tipo de arbol: " + tipo;
+                resultado = "Hubo un error en Campos.h al buscar " + dato + " en " + nombreCampo + " ya que no se encontro un nodo con el dato solicitado. \nTipo de arbol: " + tipo;
             }
 
 
@@ -290,7 +308,7 @@ string Campos::obtenerPorContenido(string nombreCampo, string dato){
                 id = encontrado->obtId();
                 resultado += dondeBuscarPorDato->nombreCampo + ": " + to_string(encontrado->obtDato());
             } else{
-                resultado = "Hubo un error en Campos.h al buscar " + dato + " en " + nombreCampo + " ya que no se encontro un nodo con el dato solicitado. Tipo de arbol: " + tipo;
+                resultado = "Hubo un error en Campos.h al buscar " + dato + " en " + nombreCampo + " ya que no se encontro un nodo con el dato solicitado. \nTipo de arbol: " + tipo;
             }
         }      
     }
@@ -323,7 +341,7 @@ string Campos::obtenerPorId(int id, int posicionArbol){
             if(encontrado != nullptr){
                 resultado += dondeBuscarPorDato->nombreCampo + ": " + encontrado->obtDato();
             } else{
-                resultado = "Hubo un error en Campos.h al buscar el id " + std::to_string(id) + " en " + nombreCampo + " ya que no se encontro un nodo con el id solicitado. Tipo de arbol: " + tipo;
+                resultado = "Hubo un error en Campos.h al buscar el id " + std::to_string(id) + " en " + nombreCampo + " ya que no se encontro un nodo con el id solicitado. \nTipo de arbol: " + tipo;
             }
 
 
@@ -336,7 +354,7 @@ string Campos::obtenerPorId(int id, int posicionArbol){
                 Date* fecha = encontrado->obtDato();
                 resultado += dondeBuscarPorDato->nombreCampo + ": " + fecha->obtFecha();
             } else{
-                resultado = "Hubo un error en Campos.h al buscar el id " + std::to_string(id) + " en " + nombreCampo + " ya que no se encontro un nodo con el id solicitado. Tipo de arbol: " + tipo;
+                resultado = "Hubo un error en Campos.h al buscar el id " + std::to_string(id) + " en " + nombreCampo + " ya que no se encontro un nodo con el id solicitado. \nTipo de arbol: " + tipo;
             }
 
 
@@ -347,7 +365,7 @@ string Campos::obtenerPorId(int id, int posicionArbol){
             if(encontrado != nullptr){
                 resultado += dondeBuscarPorDato->nombreCampo + ": " + encontrado->obtDato();
             } else{
-              resultado = "Hubo un error en Campos.h al buscar el id " + std::to_string(id) + " en " + nombreCampo + " ya que no se encontro un nodo con el id solicitado. Tipo de arbol: " + tipo;
+              resultado = "Hubo un error en Campos.h al buscar el id " + std::to_string(id) + " en " + nombreCampo + " ya que no se encontro un nodo con el id solicitado. \nTipo de arbol: " + tipo;
            }
 
 
@@ -358,7 +376,7 @@ string Campos::obtenerPorId(int id, int posicionArbol){
             if(encontrado != nullptr){
                 resultado += dondeBuscarPorDato->nombreCampo + ": " + to_string(encontrado->obtDato());
             } else{
-                resultado = "Hubo un error en Campos.h al buscar el id " + std::to_string(id) + " en " + nombreCampo + " ya que no se encontro un nodo con el id solicitado. Tipo de arbol: " + tipo;
+                resultado = "Hubo un error en Campos.h al buscar el id " + std::to_string(id) + " en " + nombreCampo + " ya que no se encontro un nodo con el id solicitado. \nTipo de arbol: " + tipo;
             }
 
         }

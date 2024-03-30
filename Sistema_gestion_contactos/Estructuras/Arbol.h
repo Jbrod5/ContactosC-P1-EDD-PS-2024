@@ -7,6 +7,7 @@
 #include <string>
 #include <typeinfo>
 #include "Date.h"
+#include "Logger.h"
 using namespace std; 
 
 template<typename T>
@@ -17,7 +18,7 @@ class Arbol{
         bool vacio;
         int cantidadNodos; 
         Nodo<T>* raiz;
-
+        Logger logger;
 
         void insertarRecursivo(Nodo<T>* nodo, T dato, int id);
 
