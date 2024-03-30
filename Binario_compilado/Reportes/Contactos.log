@@ -12268,3 +12268,5973 @@ Grupos.h: Grafo de todo el sistema generado correctamente!
 29-03-23:06:25
 Comando reconocido desde archivo: ||
 
+29-03-23:19:42
+Importar desde script reconocido.
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD NEW-GROUP escola FIELDS(tipo CHAR, estudiante STRING, fechaDeInscripcion DATE, clave INTEGER);|
+
+29-03-23:19:42
+Agregar grupo reconocido.
+
+29-03-23:19:42
+Grupos.h: se ha creado un grupo nuevo usando agregarGrupo(). 
+Nombre del grupo que agregado: escola
+Posicion en la tabla retornada por hash: 1
+
+29-03-23:19:42
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: tipo
+Posicion otorgada por funcion hash: 0
+
+29-03-23:19:42
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: estudiante
+Posicion otorgada por funcion hash: 2
+
+29-03-23:19:42
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: fechaDeInscripcion
+Posicion otorgada por funcion hash: 1
+
+29-03-23:19:42
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: clave
+Posicion otorgada por funcion hash: 3
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(Z, Pamela, 01-01-2003, 12);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: Z, Pamela, 01-01-2003, 12);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: Z
+Uso actual: 1
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Pamela
+Uso actual: 1
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  01-01-2003
+Uso actual: 1
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  12
+Uso actual: 1
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(P, Diana, 22-03-2010, 81);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: P, Diana, 22-03-2010, 81);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: P
+Uso actual: 2
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Diana
+Uso actual: 2
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  22-03-2010
+Uso actual: 2
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  81
+Uso actual: 2
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(M, Carlos, 13-12-1991, 11);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: M, Carlos, 13-12-1991, 11);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: M
+Uso actual: 3
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Carlos
+Uso actual: 3
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  13-12-1991
+Uso actual: 3
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  11
+Uso actual: 3
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(X, Andrea, 30-12-2004, 13);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: X, Andrea, 30-12-2004, 13);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: X
+Uso actual: 4
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Andrea
+Uso actual: 4
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  30-12-2004
+Uso actual: 4
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  13
+Uso actual: 4
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(A, Mario, 02-11-1994, 15);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: A, Mario, 02-11-1994, 15);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: A
+Uso actual: 5
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Mario
+Uso actual: 5
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  02-11-1994
+Uso actual: 5
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  15
+Uso actual: 5
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(B, Fernanda, 14-02-1992, 14);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: B, Fernanda, 14-02-1992, 14);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: B
+Uso actual: 6
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Fernanda
+Uso actual: 6
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  14-02-1992
+Uso actual: 6
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  14
+Uso actual: 6
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(O, Luis, 12-05-2005, 10);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: O, Luis, 12-05-2005, 10);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: O
+Uso actual: 7
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Luis
+Uso actual: 7
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  12-05-2005
+Uso actual: 7
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  10
+Uso actual: 7
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(L, Juan, 05-06-1998, 18);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: L, Juan, 05-06-1998, 18);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: L
+Uso actual: 8
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Juan
+Uso actual: 8
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  05-06-1998
+Uso actual: 8
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  18
+Uso actual: 8
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(K, Laura, 10-09-2001, 16);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: K, Laura, 10-09-2001, 16);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: K
+Uso actual: 9
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Laura
+Uso actual: 9
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  10-09-2001
+Uso actual: 9
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  16
+Uso actual: 9
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(N, Ana, 25-07-1995, 20);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: N, Ana, 25-07-1995, 20);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: N
+Uso actual: 10
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Ana
+Uso actual: 10
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  25-07-1995
+Uso actual: 10
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  20
+Uso actual: 10
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(Q, Roberto, 15-03-1990, 25);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: Q, Roberto, 15-03-1990, 25);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: Q
+Uso actual: 11
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Roberto
+Uso actual: 11
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  15-03-1990
+Uso actual: 11
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  25
+Uso actual: 11
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(S, Marta, 08-11-2002, 17);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: S, Marta, 08-11-2002, 17);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: S
+Uso actual: 12
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Marta
+Uso actual: 12
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  08-11-2002
+Uso actual: 12
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  17
+Uso actual: 12
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(T, Pedro, 20-02-1999, 19);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: T, Pedro, 20-02-1999, 19);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: T
+Uso actual: 13
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Pedro
+Uso actual: 13
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  20-02-1999
+Uso actual: 13
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  19
+Uso actual: 13
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(U, Isabel, 03-09-1993, 23);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: U, Isabel, 03-09-1993, 23);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: U
+Uso actual: 14
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Isabel
+Uso actual: 14
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  03-09-1993
+Uso actual: 14
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  23
+Uso actual: 14
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(V, Alejandro, 12-12-1997, 18);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: V, Alejandro, 12-12-1997, 18);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: V
+Uso actual: 15
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Alejandro
+Uso actual: 15
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  12-12-1997
+Uso actual: 15
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  18
+Uso actual: 15
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(W, Carolina, 28-05-1996, 24);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: W, Carolina, 28-05-1996, 24);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: W
+Uso actual: 16
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Carolina
+Uso actual: 16
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  28-05-1996
+Uso actual: 16
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  24
+Uso actual: 16
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(Y, Sofia, 07-04-2000, 21);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: Y, Sofia, 07-04-2000, 21);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: Y
+Uso actual: 17
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Sofia
+Uso actual: 17
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  07-04-2000
+Uso actual: 17
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  21
+Uso actual: 17
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD NEW-GROUP clientes FIELDS (nombre STRING, telefono INTEGER);|
+
+29-03-23:19:42
+Agregar grupo reconocido.
+
+29-03-23:19:42
+Grupos.h: se ha creado un grupo nuevo usando agregarGrupo(). 
+Nombre del grupo que agregado: clientes
+Posicion en la tabla retornada por hash: 0
+
+29-03-23:19:42
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: nombre
+Posicion otorgada por funcion hash: 1
+
+29-03-23:19:42
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: telefono
+Posicion otorgada por funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Pedro, 12453225);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Pedro, 12453225);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Pedro
+Uso actual: 1
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  12453225
+Uso actual: 1
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Juan, 45123568);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Juan, 45123568);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Juan
+Uso actual: 2
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  45123568
+Uso actual: 2
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Bartolo, 1001205);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Bartolo, 1001205);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Bartolo
+Uso actual: 3
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  1001205
+Uso actual: 3
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Maria, 55845543);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Maria, 55845543);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Maria
+Uso actual: 4
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  55845543
+Uso actual: 4
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Judas, 22323232);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Judas, 22323232);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Judas
+Uso actual: 5
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  22323232
+Uso actual: 5
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD NEW-GROUP frens FIELDS (nombre STRING, telefono INTEGER, cumpleanoz DATE);|
+
+29-03-23:19:42
+Agregar grupo reconocido.
+
+29-03-23:19:42
+Grupos.h: se ha creado un grupo nuevo usando agregarGrupo(). 
+Nombre del grupo que agregado: frens
+Posicion en la tabla retornada por hash: 2
+
+29-03-23:19:42
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: nombre
+Posicion otorgada por funcion hash: 1
+
+29-03-23:19:42
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: telefono
+Posicion otorgada por funcion hash: 2
+
+29-03-23:19:42
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: cumpleanoz
+Posicion otorgada por funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Juan, 45123568);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Juan, 45123568);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Juan
+Uso actual: 6
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  45123568
+Uso actual: 6
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Bartolo, 1001205);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Bartolo, 1001205);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Bartolo
+Uso actual: 7
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  1001205
+Uso actual: 7
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Maria, 55845543);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Maria, 55845543);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Maria
+Uso actual: 8
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  55845543
+Uso actual: 8
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Judas, 22323232);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Judas, 22323232);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Judas
+Uso actual: 9
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  22323232
+Uso actual: 9
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Luis, 55555555);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Luis, 55555555);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Luis
+Uso actual: 10
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  55555555
+Uso actual: 10
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Fernando, 22221111);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Fernando, 22221111);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Fernando
+Uso actual: 11
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  22221111
+Uso actual: 11
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Carolina, 99999999);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Carolina, 99999999);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Carolina
+Uso actual: 12
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  99999999
+Uso actual: 12
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Roberto, 11112222);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Roberto, 11112222);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Roberto
+Uso actual: 13
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  11112222
+Uso actual: 13
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Laura, 44443333);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Laura, 44443333);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Laura
+Uso actual: 14
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  44443333
+Uso actual: 14
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Diego, 77778888);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Diego, 77778888);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Diego
+Uso actual: 15
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  77778888
+Uso actual: 15
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Sofia, 66667777);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Sofia, 66667777);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Sofia
+Uso actual: 16
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  66667777
+Uso actual: 16
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Valentina, 88889999);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Valentina, 88889999);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Valentina
+Uso actual: 17
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  88889999
+Uso actual: 17
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Ricardo, 77777777);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Ricardo, 77777777);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Ricardo
+Uso actual: 18
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  77777777
+Uso actual: 18
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Isabel, 55554444);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Isabel, 55554444);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Isabel
+Uso actual: 19
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  55554444
+Uso actual: 19
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Andres, 12348765);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Andres, 12348765);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Andres
+Uso actual: 20
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  12348765
+Uso actual: 20
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Lucia, 98761234);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Lucia, 98761234);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Lucia
+Uso actual: 21
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  98761234
+Uso actual: 21
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Gabriel, 45678901);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Gabriel, 45678901);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Gabriel
+Uso actual: 22
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  45678901
+Uso actual: 22
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Daniela, 13579246);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Daniela, 13579246);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Daniela
+Uso actual: 23
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  13579246
+Uso actual: 23
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Hugo, 24681357);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Hugo, 24681357);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Hugo
+Uso actual: 24
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  24681357
+Uso actual: 24
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Mariana, 78901234);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Mariana, 78901234);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Mariana
+Uso actual: 25
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  78901234
+Uso actual: 25
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Javier, 10293847);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Javier, 10293847);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Javier
+Uso actual: 26
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  10293847
+Uso actual: 26
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Valeria, 67584930);|
+
+29-03-23:19:42
+Agregar contactos reconocido.
+
+29-03-23:19:42
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Valeria, 67584930);
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Valeria
+Uso actual: 27
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:19:42
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  67584930
+Uso actual: 27
+
+29-03-23:19:42
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:19:42
+Comando reconocido desde archivo: |GENERATE GRAPH GROUP clientes;|
+
+29-03-23:19:42
+Generar grafo de grupo reconocido.
+
+29-03-23:19:42
+Grupos.h: Grafo clientes generado correctamente!
+
+29-03-23:19:42
+Comando reconocido desde archivo: |FIND CONTACT IN clientes CONTACT-FIELD nombre=Pedro;|
+
+29-03-23:19:42
+El nombre del campo a buscar es: |nombre|
+El nombre del dato a buscar es: |Pedro|
+
+29-03-23:19:42
+Buscar contacto reconocido.
+Resultado: nombre: Pedro
+telefono: 12453225
+
+
+
+
+
+29-03-23:19:42
+Comando reconocido desde archivo: |FIND CONTACT IN clientes CONTACT-FIELD nombre=Juan;|
+
+29-03-23:19:42
+El nombre del campo a buscar es: |nombre|
+El nombre del dato a buscar es: |Juan|
+
+29-03-23:19:42
+Buscar contacto reconocido.
+Resultado: nombre: Juan
+telefono: 45123568
+
+
+
+
+
+29-03-23:19:42
+Comando reconocido desde archivo: |FIND CONTACT IN clientes CONTACT-FIELD nombre=Bartolo;|
+
+29-03-23:19:42
+El nombre del campo a buscar es: |nombre|
+El nombre del dato a buscar es: |Bartolo|
+
+29-03-23:19:42
+Buscar contacto reconocido.
+Resultado: nombre: Bartolo
+telefono: 88889999
+
+
+
+
+
+29-03-23:19:42
+Comando reconocido desde archivo: |FIND CONTACT IN clientes CONTACT-FIELD telefono=12453225;|
+
+29-03-23:19:42
+El nombre del campo a buscar es: |telefono|
+El nombre del dato a buscar es: |12453225|
+
+29-03-23:19:42
+Buscar contacto reconocido.
+Resultado: telefono: 12453225
+nombre: Pedro
+
+
+
+
+
+29-03-23:19:42
+Comando reconocido desde archivo: |FIND CONTACT IN clientes CONTACT-FIELD telefono=001205;|
+
+29-03-23:19:42
+El nombre del campo a buscar es: |telefono|
+El nombre del dato a buscar es: |001205|
+
+29-03-23:19:42
+Buscar contacto reconocido.
+Resultado: Hubo un error en Campos.h al buscar 001205 en telefono ya que no se encontro un nodo con el dato solicitado. 
+Tipo de arbol: ArbolInt
+nombre: Valentina
+
+
+
+
+
+29-03-23:19:42
+Comando reconocido desde archivo: |FIND CONTACT IN clientes CONTACT-FIELD telefono=55555555;|
+
+29-03-23:19:42
+El nombre del campo a buscar es: |telefono|
+El nombre del dato a buscar es: |55555555|
+
+29-03-23:19:42
+Buscar contacto reconocido.
+Resultado: telefono: 55555555
+nombre: Valentina
+
+
+
+
+
+29-03-23:19:42
+Comando reconocido desde archivo: |GENERATE GRAPH GROUP escola;|
+
+29-03-23:19:42
+Generar grafo de grupo reconocido.
+
+29-03-23:19:42
+Grupos.h: Grafo escola generado correctamente!
+
+29-03-23:19:42
+Comando reconocido desde archivo: |GENERATE CONTACTS GRAPH;|
+
+29-03-23:19:42
+Generar grafo de todo el sistema reconocido.
+
+29-03-23:19:42
+Grupos.h: Grafo de todo el sistema generado correctamente!
+
+29-03-23:19:42
+Comando reconocido desde archivo: ||
+
+29-03-23:21:12
+Importar desde script reconocido.
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD NEW-GROUP escola FIELDS(tipo CHAR, estudiante STRING, fechaDeInscripcion DATE, clave INTEGER);|
+
+29-03-23:21:12
+Agregar grupo reconocido.
+
+29-03-23:21:12
+Grupos.h: se ha creado un grupo nuevo usando agregarGrupo(). 
+Nombre del grupo que agregado: escola
+Posicion en la tabla retornada por hash: 1
+
+29-03-23:21:12
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: tipo
+Posicion otorgada por funcion hash: 0
+
+29-03-23:21:12
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: estudiante
+Posicion otorgada por funcion hash: 2
+
+29-03-23:21:12
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: fechaDeInscripcion
+Posicion otorgada por funcion hash: 1
+
+29-03-23:21:12
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: clave
+Posicion otorgada por funcion hash: 3
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(Z, Pamela, 01-01-2003, 12);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: Z, Pamela, 01-01-2003, 12);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: Z
+Uso actual: 1
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Pamela
+Uso actual: 1
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  01-01-2003
+Uso actual: 1
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  12
+Uso actual: 1
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(P, Diana, 22-03-2010, 81);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: P, Diana, 22-03-2010, 81);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: P
+Uso actual: 2
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Diana
+Uso actual: 2
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  22-03-2010
+Uso actual: 2
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  81
+Uso actual: 2
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(M, Carlos, 13-12-1991, 11);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: M, Carlos, 13-12-1991, 11);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: M
+Uso actual: 3
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Carlos
+Uso actual: 3
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  13-12-1991
+Uso actual: 3
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  11
+Uso actual: 3
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(X, Andrea, 30-12-2004, 13);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: X, Andrea, 30-12-2004, 13);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: X
+Uso actual: 4
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Andrea
+Uso actual: 4
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  30-12-2004
+Uso actual: 4
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  13
+Uso actual: 4
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(A, Mario, 02-11-1994, 15);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: A, Mario, 02-11-1994, 15);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: A
+Uso actual: 5
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Mario
+Uso actual: 5
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  02-11-1994
+Uso actual: 5
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  15
+Uso actual: 5
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(B, Fernanda, 14-02-1992, 14);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: B, Fernanda, 14-02-1992, 14);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: B
+Uso actual: 6
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Fernanda
+Uso actual: 6
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  14-02-1992
+Uso actual: 6
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  14
+Uso actual: 6
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(O, Luis, 12-05-2005, 10);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: O, Luis, 12-05-2005, 10);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: O
+Uso actual: 7
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Luis
+Uso actual: 7
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  12-05-2005
+Uso actual: 7
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  10
+Uso actual: 7
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(L, Juan, 05-06-1998, 18);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: L, Juan, 05-06-1998, 18);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: L
+Uso actual: 8
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Juan
+Uso actual: 8
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  05-06-1998
+Uso actual: 8
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  18
+Uso actual: 8
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(K, Laura, 10-09-2001, 16);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: K, Laura, 10-09-2001, 16);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: K
+Uso actual: 9
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Laura
+Uso actual: 9
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  10-09-2001
+Uso actual: 9
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  16
+Uso actual: 9
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(N, Ana, 25-07-1995, 20);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: N, Ana, 25-07-1995, 20);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: N
+Uso actual: 10
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Ana
+Uso actual: 10
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  25-07-1995
+Uso actual: 10
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  20
+Uso actual: 10
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(Q, Roberto, 15-03-1990, 25);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: Q, Roberto, 15-03-1990, 25);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: Q
+Uso actual: 11
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Roberto
+Uso actual: 11
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  15-03-1990
+Uso actual: 11
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  25
+Uso actual: 11
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(S, Marta, 08-11-2002, 17);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: S, Marta, 08-11-2002, 17);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: S
+Uso actual: 12
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Marta
+Uso actual: 12
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  08-11-2002
+Uso actual: 12
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  17
+Uso actual: 12
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(T, Pedro, 20-02-1999, 19);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: T, Pedro, 20-02-1999, 19);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: T
+Uso actual: 13
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Pedro
+Uso actual: 13
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  20-02-1999
+Uso actual: 13
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  19
+Uso actual: 13
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(U, Isabel, 03-09-1993, 23);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: U, Isabel, 03-09-1993, 23);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: U
+Uso actual: 14
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Isabel
+Uso actual: 14
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  03-09-1993
+Uso actual: 14
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  23
+Uso actual: 14
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(V, Alejandro, 12-12-1997, 18);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: V, Alejandro, 12-12-1997, 18);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: V
+Uso actual: 15
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Alejandro
+Uso actual: 15
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  12-12-1997
+Uso actual: 15
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  18
+Uso actual: 15
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(W, Carolina, 28-05-1996, 24);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: W, Carolina, 28-05-1996, 24);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: W
+Uso actual: 16
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Carolina
+Uso actual: 16
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  28-05-1996
+Uso actual: 16
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  24
+Uso actual: 16
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(Y, Sofia, 07-04-2000, 21);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: Y, Sofia, 07-04-2000, 21);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: Y
+Uso actual: 17
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Sofia
+Uso actual: 17
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  07-04-2000
+Uso actual: 17
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  21
+Uso actual: 17
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD NEW-GROUP clientes FIELDS (nombre STRING, telefono INTEGER);|
+
+29-03-23:21:12
+Agregar grupo reconocido.
+
+29-03-23:21:12
+Grupos.h: se ha creado un grupo nuevo usando agregarGrupo(). 
+Nombre del grupo que agregado: clientes
+Posicion en la tabla retornada por hash: 0
+
+29-03-23:21:12
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: nombre
+Posicion otorgada por funcion hash: 1
+
+29-03-23:21:12
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: telefono
+Posicion otorgada por funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Pedro, 12453225);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Pedro, 12453225);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Pedro
+Uso actual: 1
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  12453225
+Uso actual: 1
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Juan, 45123568);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Juan, 45123568);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Juan
+Uso actual: 2
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  45123568
+Uso actual: 2
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Bartolo, 1001205);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Bartolo, 1001205);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Bartolo
+Uso actual: 3
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  1001205
+Uso actual: 3
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Maria, 55845543);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Maria, 55845543);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Maria
+Uso actual: 4
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  55845543
+Uso actual: 4
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Judas, 22323232);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Judas, 22323232);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Judas
+Uso actual: 5
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  22323232
+Uso actual: 5
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD NEW-GROUP frens FIELDS (nombre STRING, telefono INTEGER, cumpleanoz DATE);|
+
+29-03-23:21:12
+Agregar grupo reconocido.
+
+29-03-23:21:12
+Grupos.h: se ha creado un grupo nuevo usando agregarGrupo(). 
+Nombre del grupo que agregado: frens
+Posicion en la tabla retornada por hash: 2
+
+29-03-23:21:12
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: nombre
+Posicion otorgada por funcion hash: 1
+
+29-03-23:21:12
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: telefono
+Posicion otorgada por funcion hash: 2
+
+29-03-23:21:12
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: cumpleanoz
+Posicion otorgada por funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Juan, 45123568);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Juan, 45123568);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Juan
+Uso actual: 6
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  45123568
+Uso actual: 6
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Bartolo, 1001205);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Bartolo, 1001205);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Bartolo
+Uso actual: 7
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  1001205
+Uso actual: 7
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Maria, 55845543);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Maria, 55845543);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Maria
+Uso actual: 8
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  55845543
+Uso actual: 8
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Judas, 22323232);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Judas, 22323232);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Judas
+Uso actual: 9
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  22323232
+Uso actual: 9
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Luis, 55555555);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Luis, 55555555);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Luis
+Uso actual: 10
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  55555555
+Uso actual: 10
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Fernando, 22221111);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Fernando, 22221111);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Fernando
+Uso actual: 11
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  22221111
+Uso actual: 11
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Carolina, 99999999);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Carolina, 99999999);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Carolina
+Uso actual: 12
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  99999999
+Uso actual: 12
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Roberto, 11112222);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Roberto, 11112222);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Roberto
+Uso actual: 13
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  11112222
+Uso actual: 13
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Laura, 44443333);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Laura, 44443333);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Laura
+Uso actual: 14
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  44443333
+Uso actual: 14
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Diego, 77778888);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Diego, 77778888);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Diego
+Uso actual: 15
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  77778888
+Uso actual: 15
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Sofia, 66667777);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Sofia, 66667777);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Sofia
+Uso actual: 16
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  66667777
+Uso actual: 16
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Valentina, 88889999);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Valentina, 88889999);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Valentina
+Uso actual: 17
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  88889999
+Uso actual: 17
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Ricardo, 77777777);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Ricardo, 77777777);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Ricardo
+Uso actual: 18
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  77777777
+Uso actual: 18
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Isabel, 55554444);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Isabel, 55554444);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Isabel
+Uso actual: 19
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  55554444
+Uso actual: 19
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Andres, 12348765);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Andres, 12348765);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Andres
+Uso actual: 20
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  12348765
+Uso actual: 20
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Lucia, 98761234);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Lucia, 98761234);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Lucia
+Uso actual: 21
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  98761234
+Uso actual: 21
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Gabriel, 45678901);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Gabriel, 45678901);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Gabriel
+Uso actual: 22
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  45678901
+Uso actual: 22
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Daniela, 13579246);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Daniela, 13579246);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Daniela
+Uso actual: 23
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  13579246
+Uso actual: 23
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Hugo, 24681357);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Hugo, 24681357);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Hugo
+Uso actual: 24
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  24681357
+Uso actual: 24
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Mariana, 78901234);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Mariana, 78901234);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Mariana
+Uso actual: 25
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  78901234
+Uso actual: 25
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Javier, 10293847);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Javier, 10293847);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Javier
+Uso actual: 26
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  10293847
+Uso actual: 26
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Valeria, 67584930);|
+
+29-03-23:21:12
+Agregar contactos reconocido.
+
+29-03-23:21:12
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Valeria, 67584930);
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Valeria
+Uso actual: 27
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:21:12
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  67584930
+Uso actual: 27
+
+29-03-23:21:12
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:21:12
+Comando reconocido desde archivo: |GENERATE GRAPH GROUP clientes;|
+
+29-03-23:21:12
+Generar grafo de grupo reconocido.
+
+29-03-23:21:12
+Grupos.h: Grafo clientes generado correctamente!
+
+29-03-23:21:12
+Comando reconocido desde archivo: |FIND CONTACT IN clientes CONTACT-FIELD nombre=Pedro;|
+
+29-03-23:21:12
+El nombre del campo a buscar es: |nombre|
+El nombre del dato a buscar es: |Pedro|
+
+29-03-23:21:12
+Buscar contacto reconocido.
+Resultado: nombre: Pedro
+telefono: 12453225
+
+
+
+
+
+29-03-23:21:12
+Comando reconocido desde archivo: |FIND CONTACT IN clientes CONTACT-FIELD nombre=Juan;|
+
+29-03-23:21:12
+El nombre del campo a buscar es: |nombre|
+El nombre del dato a buscar es: |Juan|
+
+29-03-23:21:12
+Buscar contacto reconocido.
+Resultado: nombre: Juan
+telefono: 45123568
+
+
+
+
+
+29-03-23:21:12
+Comando reconocido desde archivo: |FIND CONTACT IN clientes CONTACT-FIELD nombre=Bartolo;|
+
+29-03-23:21:12
+El nombre del campo a buscar es: |nombre|
+El nombre del dato a buscar es: |Bartolo|
+
+29-03-23:21:12
+Buscar contacto reconocido.
+Resultado: nombre: Bartolo
+telefono: 88889999
+
+
+
+
+
+29-03-23:21:12
+Comando reconocido desde archivo: |FIND CONTACT IN clientes CONTACT-FIELD telefono=12453225;|
+
+29-03-23:21:12
+El nombre del campo a buscar es: |telefono|
+El nombre del dato a buscar es: |12453225|
+
+29-03-23:21:12
+Buscar contacto reconocido.
+Resultado: telefono: 12453225
+nombre: Pedro
+
+
+
+
+
+29-03-23:21:12
+Comando reconocido desde archivo: |FIND CONTACT IN clientes CONTACT-FIELD telefono=001205;|
+
+29-03-23:21:12
+El nombre del campo a buscar es: |telefono|
+El nombre del dato a buscar es: |001205|
+
+29-03-23:21:12
+Buscar contacto reconocido.
+Resultado: Hubo un error en Campos.h al buscar 001205 en telefono ya que no se encontro un nodo con el dato solicitado. 
+Tipo de arbol: ArbolInt
+nombre: Valentina
+
+
+
+
+
+29-03-23:21:12
+Comando reconocido desde archivo: |FIND CONTACT IN clientes CONTACT-FIELD telefono=55555555;|
+
+29-03-23:21:12
+El nombre del campo a buscar es: |telefono|
+El nombre del dato a buscar es: |55555555|
+
+29-03-23:21:12
+Buscar contacto reconocido.
+Resultado: telefono: 55555555
+nombre: Valentina
+
+
+
+
+
+29-03-23:21:12
+Comando reconocido desde archivo: |GENERATE GRAPH GROUP escola;|
+
+29-03-23:21:12
+Generar grafo de grupo reconocido.
+
+29-03-23:21:12
+Grupos.h: Grafo escola generado correctamente!
+
+29-03-23:21:12
+Comando reconocido desde archivo: |GENERATE CONTACTS GRAPH;|
+
+29-03-23:21:12
+Generar grafo de todo el sistema reconocido.
+
+29-03-23:21:12
+Grupos.h: Grafo de todo el sistema generado correctamente!
+
+29-03-23:21:12
+Comando reconocido desde archivo: ||
+
+29-03-23:30:07
+Importar desde script reconocido.
+
+29-03-23:30:07
+Comando reconocido desde archivo: |ADD NEW-GROUP escola FIELDS(tipo CHAR, estudiante STRING, fechaDeInscripcion DATE, clave INTEGER);|
+
+29-03-23:30:07
+Agregar grupo reconocido.
+
+29-03-23:30:07
+Grupos.h: se ha creado un grupo nuevo usando agregarGrupo(). 
+Nombre del grupo que agregado: escola
+Posicion en la tabla retornada por hash: 1
+
+29-03-23:30:07
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: tipo
+Posicion otorgada por funcion hash: 0
+
+29-03-23:30:07
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: estudiante
+Posicion otorgada por funcion hash: 2
+
+29-03-23:30:07
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: fechaDeInscripcion
+Posicion otorgada por funcion hash: 1
+
+29-03-23:30:07
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: clave
+Posicion otorgada por funcion hash: 3
+
+29-03-23:30:07
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(Z, Pamela, 01-01-2003, 12);|
+
+29-03-23:30:07
+Agregar contactos reconocido.
+
+29-03-23:30:07
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: Z, Pamela, 01-01-2003, 12);
+
+29-03-23:30:07
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: Z
+Uso actual: 1
+
+29-03-23:30:07
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:07
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Pamela
+Uso actual: 1
+
+29-03-23:30:07
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:30:07
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  01-01-2003
+Uso actual: 1
+
+29-03-23:30:07
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:07
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  12
+Uso actual: 1
+
+29-03-23:30:07
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:30:07
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(P, Diana, 22-03-2010, 81);|
+
+29-03-23:30:07
+Agregar contactos reconocido.
+
+29-03-23:30:07
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: P, Diana, 22-03-2010, 81);
+
+29-03-23:30:07
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: P
+Uso actual: 2
+
+29-03-23:30:07
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:07
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Diana
+Uso actual: 2
+
+29-03-23:30:07
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:30:07
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  22-03-2010
+Uso actual: 2
+
+29-03-23:30:07
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:07
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  81
+Uso actual: 2
+
+29-03-23:30:07
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:30:07
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(M, Carlos, 13-12-1991, 11);|
+
+29-03-23:30:07
+Agregar contactos reconocido.
+
+29-03-23:30:07
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: M, Carlos, 13-12-1991, 11);
+
+29-03-23:30:07
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: M
+Uso actual: 3
+
+29-03-23:30:07
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:07
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Carlos
+Uso actual: 3
+
+29-03-23:30:07
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:30:07
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  13-12-1991
+Uso actual: 3
+
+29-03-23:30:07
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:07
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  11
+Uso actual: 3
+
+29-03-23:30:07
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:30:07
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(X, Andrea, 30-12-2004, 13);|
+
+29-03-23:30:07
+Agregar contactos reconocido.
+
+29-03-23:30:07
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: X, Andrea, 30-12-2004, 13);
+
+29-03-23:30:07
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: X
+Uso actual: 4
+
+29-03-23:30:07
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:07
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Andrea
+Uso actual: 4
+
+29-03-23:30:07
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:30:07
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  30-12-2004
+Uso actual: 4
+
+29-03-23:30:07
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:07
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  13
+Uso actual: 4
+
+29-03-23:30:07
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:30:07
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(A, Mario, 02-11-1994, 15);|
+
+29-03-23:30:07
+Agregar contactos reconocido.
+
+29-03-23:30:07
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: A, Mario, 02-11-1994, 15);
+
+29-03-23:30:07
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: A
+Uso actual: 5
+
+29-03-23:30:07
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:07
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Mario
+Uso actual: 5
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  02-11-1994
+Uso actual: 5
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  15
+Uso actual: 5
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(B, Fernanda, 14-02-1992, 14);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: B, Fernanda, 14-02-1992, 14);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: B
+Uso actual: 6
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Fernanda
+Uso actual: 6
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  14-02-1992
+Uso actual: 6
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  14
+Uso actual: 6
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(O, Luis, 12-05-2005, 10);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: O, Luis, 12-05-2005, 10);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: O
+Uso actual: 7
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Luis
+Uso actual: 7
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  12-05-2005
+Uso actual: 7
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  10
+Uso actual: 7
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(L, Juan, 05-06-1998, 18);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: L, Juan, 05-06-1998, 18);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: L
+Uso actual: 8
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Juan
+Uso actual: 8
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  05-06-1998
+Uso actual: 8
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  18
+Uso actual: 8
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(K, Laura, 10-09-2001, 16);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: K, Laura, 10-09-2001, 16);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: K
+Uso actual: 9
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Laura
+Uso actual: 9
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  10-09-2001
+Uso actual: 9
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  16
+Uso actual: 9
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(N, Ana, 25-07-1995, 20);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: N, Ana, 25-07-1995, 20);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: N
+Uso actual: 10
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Ana
+Uso actual: 10
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  25-07-1995
+Uso actual: 10
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  20
+Uso actual: 10
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(Q, Roberto, 15-03-1990, 25);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: Q, Roberto, 15-03-1990, 25);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: Q
+Uso actual: 11
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Roberto
+Uso actual: 11
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  15-03-1990
+Uso actual: 11
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  25
+Uso actual: 11
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(S, Marta, 08-11-2002, 17);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: S, Marta, 08-11-2002, 17);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: S
+Uso actual: 12
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Marta
+Uso actual: 12
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  08-11-2002
+Uso actual: 12
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  17
+Uso actual: 12
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(T, Pedro, 20-02-1999, 19);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: T, Pedro, 20-02-1999, 19);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: T
+Uso actual: 13
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Pedro
+Uso actual: 13
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  20-02-1999
+Uso actual: 13
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  19
+Uso actual: 13
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(U, Isabel, 03-09-1993, 23);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: U, Isabel, 03-09-1993, 23);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: U
+Uso actual: 14
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Isabel
+Uso actual: 14
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  03-09-1993
+Uso actual: 14
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  23
+Uso actual: 14
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(V, Alejandro, 12-12-1997, 18);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: V, Alejandro, 12-12-1997, 18);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: V
+Uso actual: 15
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Alejandro
+Uso actual: 15
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  12-12-1997
+Uso actual: 15
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  18
+Uso actual: 15
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(W, Carolina, 28-05-1996, 24);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: W, Carolina, 28-05-1996, 24);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: W
+Uso actual: 16
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Carolina
+Uso actual: 16
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  28-05-1996
+Uso actual: 16
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  24
+Uso actual: 16
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN escola FIELDS(Y, Sofia, 07-04-2000, 21);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: escola
+Instruccion por procesar: Y, Sofia, 07-04-2000, 21);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: tipo
+Valor a insertar: Y
+Uso actual: 17
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: tipo
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: estudiante
+Valor a insertar:  Sofia
+Uso actual: 17
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: estudiante
+Posicion en la tabla proporcionada por la funcion hash: 2
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: fechaDeInscripcion
+Valor a insertar:  07-04-2000
+Uso actual: 17
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: fechaDeInscripcion
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: clave
+Valor a insertar:  21
+Uso actual: 17
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: clave
+Posicion en la tabla proporcionada por la funcion hash: 3
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD NEW-GROUP clientes FIELDS (nombre STRING, telefono INTEGER);|
+
+29-03-23:30:08
+Agregar grupo reconocido.
+
+29-03-23:30:08
+Grupos.h: se ha creado un grupo nuevo usando agregarGrupo(). 
+Nombre del grupo que agregado: clientes
+Posicion en la tabla retornada por hash: 0
+
+29-03-23:30:08
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: nombre
+Posicion otorgada por funcion hash: 1
+
+29-03-23:30:08
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: telefono
+Posicion otorgada por funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Pedro, 12453225);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Pedro, 12453225);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Pedro
+Uso actual: 1
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  12453225
+Uso actual: 1
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Juan, 45123568);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Juan, 45123568);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Juan
+Uso actual: 2
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  45123568
+Uso actual: 2
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Bartolo, 1001205);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Bartolo, 1001205);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Bartolo
+Uso actual: 3
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  1001205
+Uso actual: 3
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Maria, 55845543);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Maria, 55845543);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Maria
+Uso actual: 4
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  55845543
+Uso actual: 4
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Judas, 22323232);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Judas, 22323232);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Judas
+Uso actual: 5
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  22323232
+Uso actual: 5
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD NEW-GROUP frens FIELDS (nombre STRING, telefono INTEGER, cumpleanoz DATE);|
+
+29-03-23:30:08
+Agregar grupo reconocido.
+
+29-03-23:30:08
+Grupos.h: se ha creado un grupo nuevo usando agregarGrupo(). 
+Nombre del grupo que agregado: frens
+Posicion en la tabla retornada por hash: 2
+
+29-03-23:30:08
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: nombre
+Posicion otorgada por funcion hash: 1
+
+29-03-23:30:08
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: telefono
+Posicion otorgada por funcion hash: 2
+
+29-03-23:30:08
+Se ha agregado un campo nuevo en Campos.h - agregarCampo.
+Nombre del campo agregado: cumpleanoz
+Posicion otorgada por funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Juan, 45123568);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Juan, 45123568);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Juan
+Uso actual: 6
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  45123568
+Uso actual: 6
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Bartolo, 1001205);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Bartolo, 1001205);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Bartolo
+Uso actual: 7
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  1001205
+Uso actual: 7
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Maria, 55845543);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Maria, 55845543);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Maria
+Uso actual: 8
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  55845543
+Uso actual: 8
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Judas, 22323232);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Judas, 22323232);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Judas
+Uso actual: 9
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  22323232
+Uso actual: 9
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Luis, 55555555);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Luis, 55555555);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Luis
+Uso actual: 10
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  55555555
+Uso actual: 10
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Fernando, 22221111);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Fernando, 22221111);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Fernando
+Uso actual: 11
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  22221111
+Uso actual: 11
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Carolina, 99999999);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Carolina, 99999999);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Carolina
+Uso actual: 12
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  99999999
+Uso actual: 12
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Roberto, 11112222);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Roberto, 11112222);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Roberto
+Uso actual: 13
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  11112222
+Uso actual: 13
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Laura, 44443333);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Laura, 44443333);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Laura
+Uso actual: 14
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  44443333
+Uso actual: 14
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Diego, 77778888);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Diego, 77778888);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Diego
+Uso actual: 15
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  77778888
+Uso actual: 15
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Sofia, 66667777);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Sofia, 66667777);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Sofia
+Uso actual: 16
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  66667777
+Uso actual: 16
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Valentina, 88889999);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Valentina, 88889999);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Valentina
+Uso actual: 17
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  88889999
+Uso actual: 17
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Ricardo, 77777777);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Ricardo, 77777777);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Ricardo
+Uso actual: 18
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  77777777
+Uso actual: 18
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Isabel, 55554444);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Isabel, 55554444);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Isabel
+Uso actual: 19
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  55554444
+Uso actual: 19
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Andres, 12348765);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Andres, 12348765);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Andres
+Uso actual: 20
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  12348765
+Uso actual: 20
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Lucia, 98761234);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Lucia, 98761234);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Lucia
+Uso actual: 21
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  98761234
+Uso actual: 21
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Gabriel, 45678901);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Gabriel, 45678901);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Gabriel
+Uso actual: 22
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  45678901
+Uso actual: 22
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Daniela, 13579246);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Daniela, 13579246);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Daniela
+Uso actual: 23
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  13579246
+Uso actual: 23
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Hugo, 24681357);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Hugo, 24681357);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Hugo
+Uso actual: 24
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  24681357
+Uso actual: 24
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Mariana, 78901234);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Mariana, 78901234);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Mariana
+Uso actual: 25
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  78901234
+Uso actual: 25
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Javier, 10293847);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Javier, 10293847);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Javier
+Uso actual: 26
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  10293847
+Uso actual: 26
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |ADD CONTACT IN clientes FIELDS (Valeria, 67584930);|
+
+29-03-23:30:08
+Agregar contactos reconocido.
+
+29-03-23:30:08
+Grupos.h: Grupo donde agregar: clientes
+Instruccion por procesar: (Valeria, 67584930);
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: nombre
+Valor a insertar: Valeria
+Uso actual: 27
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: nombre
+Posicion en la tabla proporcionada por la funcion hash: 1
+
+29-03-23:30:08
+Campos.h: insertarTuplaOrdenada()
+Campo donde insertar: telefono
+Valor a insertar:  67584930
+Uso actual: 27
+
+29-03-23:30:08
+Hubo una insersion en la clase Campos (Campos.h).
+Nombre del campo insertado: telefono
+Posicion en la tabla proporcionada por la funcion hash: 0
+
+29-03-23:30:08
+Comando reconocido desde archivo: |GENERATE GRAPH GROUP clientes;|
+
+29-03-23:30:08
+Generar grafo de grupo reconocido.
+
+29-03-23:30:08
+Grupos.h: Grafo clientes generado correctamente!
+
+29-03-23:30:08
+Comando reconocido desde archivo: |FIND CONTACT IN clientes CONTACT-FIELD nombre=Pedro;|
+
+29-03-23:30:08
+El nombre del campo a buscar es: |nombre|
+El nombre del dato a buscar es: |Pedro|
+
+29-03-23:30:08
+Buscar contacto reconocido.
+Resultado: nombre: Pedro
+telefono: 12453225
+
+
+
+
+
+29-03-23:30:08
+Comando reconocido desde archivo: |FIND CONTACT IN clientes CONTACT-FIELD nombre=Juan;|
+
+29-03-23:30:08
+El nombre del campo a buscar es: |nombre|
+El nombre del dato a buscar es: |Juan|
+
+29-03-23:30:08
+Buscar contacto reconocido.
+Resultado: nombre: Juan
+telefono: 45123568
+
+
+
+
+
+29-03-23:30:08
+Comando reconocido desde archivo: |FIND CONTACT IN clientes CONTACT-FIELD nombre=Bartolo;|
+
+29-03-23:30:08
+El nombre del campo a buscar es: |nombre|
+El nombre del dato a buscar es: |Bartolo|
+
+29-03-23:30:08
+Buscar contacto reconocido.
+Resultado: nombre: Bartolo
+telefono: 88889999
+
+
+
+
+
+29-03-23:30:08
+Comando reconocido desde archivo: |FIND CONTACT IN clientes CONTACT-FIELD telefono=12453225;|
+
+29-03-23:30:08
+El nombre del campo a buscar es: |telefono|
+El nombre del dato a buscar es: |12453225|
+
+29-03-23:30:08
+Buscar contacto reconocido.
+Resultado: telefono: 12453225
+nombre: Pedro
+
+
+
+
+
+29-03-23:30:08
+Comando reconocido desde archivo: |FIND CONTACT IN clientes CONTACT-FIELD telefono=001205;|
+
+29-03-23:30:08
+El nombre del campo a buscar es: |telefono|
+El nombre del dato a buscar es: |001205|
+
+29-03-23:30:08
+Buscar contacto reconocido.
+Resultado: Hubo un error en Campos.h al buscar 001205 en telefono ya que no se encontro un nodo con el dato solicitado. 
+Tipo de arbol: ArbolInt
+nombre: Valentina
+
+
+
+
+
+29-03-23:30:08
+Comando reconocido desde archivo: |FIND CONTACT IN clientes CONTACT-FIELD telefono=55555555;|
+
+29-03-23:30:08
+El nombre del campo a buscar es: |telefono|
+El nombre del dato a buscar es: |55555555|
+
+29-03-23:30:08
+Buscar contacto reconocido.
+Resultado: telefono: 55555555
+nombre: Valentina
+
+
+
+
+
+29-03-23:30:08
+Comando reconocido desde archivo: |GENERATE GRAPH GROUP escola;|
+
+29-03-23:30:08
+Generar grafo de grupo reconocido.
+
+29-03-23:30:08
+Grupos.h: Grafo escola generado correctamente!
+
+29-03-23:30:08
+Comando reconocido desde archivo: |GENERATE CONTACTS GRAPH;|
+
+29-03-23:30:08
+Generar grafo de todo el sistema reconocido.
+
+29-03-23:30:09
+Grupos.h: Grafo de todo el sistema generado correctamente!
+
+29-03-23:30:09
+Comando reconocido desde archivo: ||
+

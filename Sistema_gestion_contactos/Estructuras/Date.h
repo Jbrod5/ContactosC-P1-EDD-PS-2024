@@ -24,12 +24,14 @@ Date::Date(string fecha){
 
 void Date::stringAFecha(string fecha){
     
-
+        if(fecha[0] == ' '){
+            fecha.erase(0,1);
+        }
         //Converir las partes del string a fecha
         // 01-10-2024 
         // dia = 0-1 recorrido 2
         // mes = 3-4 recorrido 2
-        // ano = 6-9 recorrido 4
+        // ano = 7-9 recorrido 4
         try{
             dia = stoi(fecha.substr(0, 2));
         }catch(const exception& e){
@@ -52,7 +54,7 @@ void Date::stringAFecha(string fecha){
 string Date::obtFecha(){
     string resultado = "";
 
-    /*if(dia < 10){
+    if(dia < 10){
         resultado += "0";
     }
     resultado += to_string(dia);
@@ -64,8 +66,8 @@ string Date::obtFecha(){
     resultado +=to_string(mes);
     resultado += "-";
 
-    resultado += to_string(ano);*/
-    resultado = to_string(dia) + "-"+to_string(mes)+"-"+to_string(ano);
+    resultado += to_string(ano);
+    //resultado = to_string(dia) + "/"+to_string(mes)+"/"+to_string(ano);
 
     return resultado; 
 }
