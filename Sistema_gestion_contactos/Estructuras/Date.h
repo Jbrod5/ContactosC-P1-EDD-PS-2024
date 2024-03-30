@@ -52,7 +52,7 @@ void Date::stringAFecha(string fecha){
 string Date::obtFecha(){
     string resultado = "";
 
-    if(dia < 10){
+    /*if(dia < 10){
         resultado += "0";
     }
     resultado += to_string(dia);
@@ -64,7 +64,8 @@ string Date::obtFecha(){
     resultado +=to_string(mes);
     resultado += "-";
 
-    resultado += to_string(ano);
+    resultado += to_string(ano);*/
+    resultado = to_string(dia) + "-"+to_string(mes)+"-"+to_string(ano);
 
     return resultado; 
 }
