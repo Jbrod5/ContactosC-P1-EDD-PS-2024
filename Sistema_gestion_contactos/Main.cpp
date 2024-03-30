@@ -122,6 +122,14 @@ int main() {
                 leerCLI = false; 
             }
         }
+
+        //7. GENERATE CONTACTS GRAPH;
+        if(comando == "GENERATE CONTACTS GRAPH;"){
+            cout<<"Generar grafo de todo el sistema reconocido."<<endl; 
+            grupos->generarGrafoContactos();
+        }
+
+
         comando = "";
 
     }

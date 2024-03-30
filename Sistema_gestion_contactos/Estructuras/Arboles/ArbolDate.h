@@ -25,6 +25,9 @@
             void generarGrafico();
 
             string obtenerGrafo() override;
+            ~ArbolDate() override {
+            // Código del destructor de la clase ArbolDate
+            }
             
     };
 

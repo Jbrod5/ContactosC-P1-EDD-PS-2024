@@ -50,6 +50,11 @@ class Campos{
 Campos::Campos(int  cantidadCampos, string grupo){
     uso = 0; 
     arboles = new ArbolBase*[cantidadCampos];
+    for (int i = 0; i < cantidadCampos; i++)
+    {
+        arboles[i] = new ArbolBase();
+    }
+    
     tamanio = cantidadCampos;
     this-> grupo = grupo;
 }
@@ -81,7 +86,14 @@ void Campos::agregarCampo(string nombreCampo, int tipo){
     int posicion = hash(nombreCampo);
     cout<<endl;
     // 1. Verificar que no haya colision:
-    if(arboles[posicion] == nullptr){
+    ArbolBase* verificacion = arboles[posicion];
+    if(verificacion != nullptr && !(typeid(*verificacion) == typeid(ArbolChar) ||  typeid(*verificacion) == typeid(ArbolInt) || typeid(*verificacion) == typeid(ArbolString) || typeid(*verificacion) == typeid(ArbolDate))){
+        cout<<"Antes de asignar nlptr"<<endl; 
+        verificacion = nullptr;
+        cout<<"Campos.h: agregarCampo: Verificacion estaba iniciado pero no era un arbol donde guardar."<<endl;
+    }
+
+    if(verificacion == nullptr){
         //2. Crear la instancia del arbol
         switch (tipo)
         {
@@ -106,7 +118,9 @@ void Campos::agregarCampo(string nombreCampo, int tipo){
     }else{
         cout<<"Ocurrio una colision al intentar agregar un campo en Campos.h - agregarCampo."<<endl;
         cout<<"Nombre del campo que se quiso agregar: |" <<nombreCampo<<"|"<<endl; 
-        cout<<"Posicion otorgada por funcion hash: "<<posicion<<endl; 
+        cout<<"Posicion otorgada por funcion hash: "<<posicion<<endl;
+        cout<<"Nulo? : " << (arboles[posicion] == nullptr);
+        cout<<"Arbol ocupando la posicion: "<< arboles[posicion]->nombreCampo; 
     }
 }
 
@@ -355,9 +369,14 @@ string Campos::obtenerPorId(int id, int posicionArbol){
 
 string Campos::obtenerGrafo(){
     string grafo = "digraph "+ grupo + "{\n";
+    string nombrecampo = ""; 
     for (int i = 0; i < tamanio; i++){
         if (arboles[i] != nullptr){
-            grafo += to_string(i+1000)         + "[label=\"" + arboles[i]->nombreCampo+ "\"];\n";
+            nombrecampo = arboles[i]->nombreCampo;
+            if(nombrecampo.empty()){
+                nombrecampo = "Campo no inicializado.";
+            }
+            grafo += to_string(i+1000)         + "[label=\"" + nombrecampo + "\"];\n";
             grafo += to_string(i+tamanio+1000) + "[label=\"" + to_string(i)           + "\"];\n";
             grafo += to_string(i+tamanio+1000) +   " -> "    + to_string(i+1000)      + ";   \n";
         }else{

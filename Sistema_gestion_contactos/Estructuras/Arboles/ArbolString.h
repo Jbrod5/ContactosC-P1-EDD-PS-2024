@@ -25,6 +25,9 @@ using namespace std;
             void balancear();
             void generarGrafico();
             string obtenerGrafo() override;
+            ~ArbolString() override {
+            // Código del destructor de la clase ArbolString
+            }
             
     };
 

@@ -107,6 +107,7 @@ void Arbol<T>::insertarRecursivo(Nodo<T>* nodo, T dato, int id){
 
 template<typename T>
 Nodo<T>* Arbol<T>::buscarPorId(int id){
+    cout<<"Id por buscar: " <<id<<endl; 
     return buscarPorIdRecursivo(id, raiz);
 }
 

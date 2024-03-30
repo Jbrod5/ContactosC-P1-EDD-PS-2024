@@ -1,8 +1,8 @@
 ADD NEW-GROUP clientes FIELDS (nombre STRING, telefono INTEGER);
 ADD CONTACT IN clientes FIELDS (Pedro, 12453225);
-ADD NEW-GROUP amigos FIELDS (nombre STRING, telefono INTEGER, cumpleanos DATE);
+ADD NEW-GROUP frens FIELDS (nombre STRING, telefono INTEGER, cumpleanos DATE);
 ADD CONTACT IN clientes FIELDS (Juan, 45123568);
-ADD CONTACT IN clientes FIELDS (Bartolo, 001205);
+ADD CONTACT IN clientes FIELDS (Bartolo, 1001205);
 ADD CONTACT IN clientes FIELDS (Maria, 55845543);
 ADD CONTACT IN clientes FIELDS (Judas, 22323232);
 ADD CONTACT IN clientes FIELDS (Luis, 55555555);
@@ -29,3 +29,4 @@ FIND CONTACT IN clientes CONTACT-FIELD nombre=Juan;
 FIND CONTACT IN clientes CONTACT-FIELD nombre=Bartolo;
 FIND CONTACT IN clientes CONTACT-FIELD telefono=12453225;
 FIND CONTACT IN clientes CONTACT-FIELD telefono=001205;
+FIND CONTACT IN clientes CONTACT-FIELD telefono=55555555;

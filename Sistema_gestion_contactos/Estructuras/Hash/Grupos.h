@@ -34,6 +34,8 @@ class Grupos{
         void generarGrafoGrupo(string instrGenerarGrafoGrupo); //Genera un grafo de un grupo con graphviz, cadena esperada: GENERATE GRPH GROUP grupo;
         //string obtenerContacto(string nombreGrupo, string campoABuscar, string valorABuscar); //Retorna la tupla de un contacto en base a un nombre de grupo(para hacer hash y obtener la posicion en el array), y usa internamente la funcion obtenerTupla
         //string obtenerTupla(string campo, string valorABuscar); //Retorna la tupla de un contacto en base a un campo y un valor, asi: [campo]=[DatoQueBusca]
+
+        void generarGrafoContactos();
 };
 #endif
 
@@ -43,6 +45,11 @@ Grupos::Grupos(){
     tamanio = 5; //Inicialmente las tablas deben ser de tamanio 5
     uso = 0; 
     grupos = new Campos*[tamanio];
+    for (int i = 0; i < tamanio; i++)
+    {
+        grupos[i] = nullptr;
+    }
+    
 }
 
 int Grupos::hash(string nombreGrupo){
@@ -67,6 +74,11 @@ void Grupos::reHash(){
     int tamanioTemporal = tamanio; 
     tamanio *= 1.6;
     Campos** gruposTemporal = new Campos*[tamanio];
+    for (int i = 0; i < tamanio; i++)
+    {
+        gruposTemporal[i] = nullptr;
+    }
+    
     Campos* grupoActual; 
     string nombreGrupoActual;
     int nuevaPosicion; 
@@ -301,4 +313,56 @@ void Grupos::generarGrafoGrupo(string instrGenerarGrafoGrupo){
         cout<<"Grupos.h: generarGrafoGrupo. Hubo un error al generar el grafo del grupo: "<<instrGenerarGrafoGrupo<<endl;
         cout<<"El grupo obtenido por la funcion hash (posicion "<< hash(instrGenerarGrafoGrupo)<<" ) es nulo."<<endl; 
     }
+}
+
+void Grupos::generarGrafoContactos(){
+    Campos* grupo; 
+    string grafo = "digraph Contactos{\n";
+           grafo+= "COMODIN_CONTACTOS [label = \"Contactos\"];\n";
+
+    //Recorrer los grupos para obtener los grafos
+
+    for (int i = 0; i < tamanio; i++){
+        grupo = grupos[i];
+        grafo += "COMODIN_CONTACTOS -> " + to_string(i+9000) + ";\n";
+        if(grupo == nullptr){
+            grafo += to_string(i+9000)         + "[label=\"" + to_string(i)           + "\"];\n";
+            grafo += to_string(i+tamanio+9000) + "[label=\"nullptr\"];\n";
+            grafo += to_string(i+9000) + " -> "+  to_string(i+tamanio+9000)+";\n";
+        }else{
+            grafo += to_string(i+9000)         + "[label=\"" + grupo->obtenerGrupo()+ "\"];\n";
+            grafo += to_string(i+tamanio+9000) + "[label=\"" + to_string(i)           + "\"];\n";
+            grafo += to_string(i+tamanio+9000) +   " -> "    + to_string(i+9000)      + ";   \n";
+        }
+    }
+
+    string grafoTemporal = "";
+    for (int i = 0; i < tamanio; i++){
+        grupo = grupos[i];
+        grafoTemporal = "";
+        if(grupo != nullptr){
+            grafoTemporal = grupo->obtenerGrafo();
+            //Eliminar digraph y sustituirlo por subgraph
+            if(grafoTemporal.length() > 7){
+                if(grafoTemporal.substr(0,7) == "digraph"){
+                    grafoTemporal.erase(0,7);
+                    grafoTemporal = "subgraph" + grafoTemporal;
+                }
+            }
+            grafo += grafoTemporal; 
+        }
+    }
+    
+
+    grafo += "}";
+    
+
+    ofstream archivo("./Grafos/CONTACTOS.dot");
+    archivo<<grafo;
+    archivo.close();
+    string comando = "dot -Tpng ./Grafos/CONTACTOS.dot -o ./Grafos/CONTACTOS.png";
+    system(comando.c_str());
+
+    cout<<"Grupos.h: Grafo de todo el sistema generado correctamente!"<<endl;
+
 }

@@ -10,15 +10,19 @@
             std::string nombreCampo;
 
             ArbolBase();
-            bool estaVacio();
+            virtual ~ArbolBase() {
+                // Código del destructor de la clase base
+            }
+
+            virtual bool estaVacio();
             //void insertar(T dato, int id);
 
 
             //Nodo<T>* buscarPorId(int id);
             //Nodo<T>* buscarPorContenido(T contenido);
        
-            void balancear();
-            void generarGrafico();
+            virtual void balancear();
+            virtual void generarGrafico();
             virtual string obtenerGrafo();
             
     };

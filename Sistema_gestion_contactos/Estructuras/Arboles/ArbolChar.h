@@ -22,6 +22,9 @@
             void balancear();
             void generarGrafico();
             string obtenerGrafo() override;
+            ~ArbolChar() override {
+            // Código del destructor de la clase ArbolChar
+            }
             
     };
 
