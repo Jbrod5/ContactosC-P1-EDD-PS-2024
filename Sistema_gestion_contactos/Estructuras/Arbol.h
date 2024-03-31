@@ -84,7 +84,7 @@ void Arbol<T>::insertar(T dato, int id){
         insertarRecursivo(raiz, dato, id);
     }
     cantidadNodos++;
-    //balancear();
+    balancear();
 }
 
 
