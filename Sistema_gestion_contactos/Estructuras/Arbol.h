@@ -27,14 +27,15 @@ class Arbol{
 
         int altura(Nodo<T>* nodo);
         int calcularFactorBalanceo(Nodo<T>* nodo);
-        void balancearRecursivo(Nodo<T>* nodo);
+        Nodo<T>*  balancearRecursivo(Nodo<T>* nodo);
 
-        void rotacionIzquierda(Nodo<T>* nodo);
-        void rotacionDerecha(Nodo<T>* nodo);
-        void rotacionIzquierdaDerecha(Nodo<T>* nodo);
-        void rotacionDerechaIzquierda(Nodo<T>* nodo);
+        Nodo<T>* rotacionIzquierda(Nodo<T>* nodo);
+        Nodo<T>* rotacionDerecha(Nodo<T>* nodo);
+        Nodo<T>* rotacionIzquierdaDerecha(Nodo<T>* nodo);
+        Nodo<T>* rotacionDerechaIzquierda(Nodo<T>* nodo);
 
         void generarGraficoRecursivo(Nodo<T>* nodo, std::ofstream& archivo);
+        void actualizarRaiz(Nodo<T>* nodo);
 
         string nombreCampo;
 
@@ -87,6 +88,10 @@ void Arbol<T>::insertar(T dato, int id){
     balancear();
 }
 
+template<typename T>
+void Arbol<T>::actualizarRaiz(Nodo<T>* nodo){
+    this->raiz = nodo;
+}
 
 template<typename T>
 void Arbol<T>::insertarRecursivo(Nodo<T>* nodo, T dato, int id){
@@ -200,69 +205,76 @@ int Arbol<T>::altura(Nodo<T>* nodo) {
 
 template<typename T>
 void Arbol<T>::balancear() {
-    balancearRecursivo(raiz);
+    raiz = balancearRecursivo(raiz);
 }
 
 template<typename T>
-void Arbol<T>::balancearRecursivo(Nodo<T>* nodo) {
+Nodo<T>* Arbol<T>::balancearRecursivo(Nodo<T>* nodo) {
     if (nodo == nullptr) {
-        return;
+        return nullptr;
     }
 
     int factorBalanceo = calcularFactorBalanceo(nodo);
 
     if (factorBalanceo > 1) {
         if (calcularFactorBalanceo(nodo->obtIzquierdo()) >= 0) {
-            rotacionDerecha(nodo);
+            nodo = rotacionDerecha(nodo);
         } else {
-            rotacionIzquierdaDerecha(nodo);
+            nodo = rotacionIzquierdaDerecha(nodo);
         }
     } else if (factorBalanceo < -1) {
         if (calcularFactorBalanceo(nodo->obtDerecho()) <= 0) {
-            rotacionIzquierda(nodo);
+            nodo = rotacionIzquierda(nodo);
         } else {
-            rotacionDerechaIzquierda(nodo);
+            nodo = rotacionDerechaIzquierda(nodo);
         }
     }
 
-    balancearRecursivo(nodo->obtIzquierdo());
-    balancearRecursivo(nodo->obtDerecho());
+    nodo->insertarIzquierdo(balancearRecursivo(nodo->obtIzquierdo())) ;
+    nodo->insertarDerecho(balancearRecursivo(nodo->obtDerecho()));
+
+    return nodo; 
 }
 
 
 
 template<typename T>
-void Arbol<T>::rotacionIzquierda(Nodo<T>* nodo) {
+Nodo<T>* Arbol<T>::rotacionIzquierda(Nodo<T>* nodo) {
     Nodo<T>* nuevoPadre = nodo->obtDerecho();
+    
     nodo->insertarDerecho(nuevoPadre->obtIzquierdo());
     nuevoPadre->insertarIzquierdo(nodo);
 
     if (nodo == raiz) {
-        raiz = nuevoPadre;
+        actualizarRaiz(nuevoPadre);
     }
+    return nuevoPadre;
 }
 
 template<typename T>
-void Arbol<T>::rotacionDerecha(Nodo<T>* nodo) {
+Nodo<T>* Arbol<T>::rotacionDerecha(Nodo<T>* nodo) {
     Nodo<T>* nuevoPadre = nodo->obtIzquierdo();
     nodo->insertarIzquierdo(nuevoPadre->obtDerecho());
     nuevoPadre->insertarDerecho(nodo);
 
     if (nodo == raiz) {
-        raiz = nuevoPadre;
+        actualizarRaiz(nuevoPadre);
     }
+    return nuevoPadre;
 }
 
 template<typename T>
-void Arbol<T>::rotacionIzquierdaDerecha(Nodo<T>* nodo) {
-    rotacionIzquierda(nodo->obtIzquierdo());
-    rotacionDerecha(nodo);
+Nodo<T>* Arbol<T>::rotacionIzquierdaDerecha(Nodo<T>* nodo) {
+    nodo->insertarIzquierdo(rotacionIzquierda(nodo->obtIzquierdo()));
+    nodo = rotacionDerecha(nodo);
+    return nodo; 
 }
 
 template<typename T>
-void Arbol<T>::rotacionDerechaIzquierda(Nodo<T>* nodo) {
-    rotacionDerecha(nodo->obtDerecho());
-    rotacionIzquierda(nodo);
+Nodo<T>* Arbol<T>::rotacionDerechaIzquierda(Nodo<T>* nodo) {
+    nodo->insertarDerecho(rotacionDerecha(nodo->obtDerecho()));
+    nodo = rotacionIzquierda(nodo);
+    return nodo; 
 }
 
 
