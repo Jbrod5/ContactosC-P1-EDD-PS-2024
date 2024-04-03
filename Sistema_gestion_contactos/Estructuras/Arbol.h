@@ -131,13 +131,21 @@ Nodo<T>* Arbol<T>::buscarPorIdRecursivo(int id, Nodo<T>* nodo){
         Nodo<T>* temporal; 
         if(nodo->obtIzquierdo() != nullptr){
             temporal = buscarPorIdRecursivo(id, nodo->obtIzquierdo());
+            if(temporal != nullptr){
+                if(temporal->obtId()== id){
+                    return temporal; 
+                }
+            }
         }
         if(nodo->obtDerecho() != nullptr){
             temporal = buscarPorIdRecursivo(id, nodo->obtDerecho());
+            if(temporal != nullptr){
+                if(temporal->obtId()== id){
+                    return temporal; 
+                }
+            }
         }
-        if(temporal != nullptr){
-            return temporal; 
-        }
+        
     }
     return nullptr;
 }
@@ -160,13 +168,17 @@ Nodo<T>* Arbol<T>::buscarPorContenidoRecursivo(T contenido, Nodo<T>* nodo){
         if(nodo->obtIzquierdo() != nullptr){
             temporal = buscarPorContenidoRecursivo(contenido, nodo->obtIzquierdo());
             if(temporal!= nullptr){
-                return temporal;
+                if(temporal->obtDato() == contenido){
+                    return temporal;
+                }
             }
         }
         if(nodo->obtDerecho() != nullptr){
             temporal = buscarPorContenidoRecursivo(contenido,nodo->obtDerecho());
             if(temporal!= nullptr){
-                return temporal;
+                if(temporal->obtDato() == contenido){
+                    return temporal;
+                }
             }
         }
     }
